@@ -111,17 +111,17 @@ inclua biblioteca Matematica --> mat
 		escreva("c = ") leia(c)
 
 		se ((c > b) e (b > a)) {
-			escreva("\nCaso 1 2 3\nc = ", c, "\nb = ", b, "\na = ", a)
+			escreva("\nCaso c > b > a\n", c, " > ", b, " > ", a)
 		} senao se ((b > c) e (c > a)) {
-			escreva("\nCaso 1 3 2\nb = ", b, "\nc = ", c, "\na = ", a)
+			escreva("\nCaso b > c > a\n", b, " > ", c, " > ", a)
 		} senao se ((c > a) e (a > b)) {
-			escreva("\nCaso 2 1 3\nc = ", c, "\na = ", a, "\nb = ", b)
+			escreva("\nCaso c > a > b\n", c, " > ", a, " > ", b)
 		} senao se ((b > a) e (a > c)) {
-			escreva("\nCaso 2 3 1\nb = ", b, "\na = ", a, "\nc = ", c)
+			escreva("\nCaso b > a > c\n", b, " > ", a, " > ", c)
 		} senao se ((a > c) e (c > b)) {
-			escreva("\nCaso 3 1 2\na = ", a, "\nc = ", c, "\nb = ", b)
+			escreva("\nCaso a > c > b\n", a, " > ", c, " > ", b)
 		} senao {
-			escreva("\nCaso 3 1 2\na = ", a, "\nb = ", b, "\nc = ", c)
+			escreva("\nCaso a > b > c\n", a, " > ", b, " > ", c)
 		}
 		*/
 		
@@ -241,7 +241,7 @@ inclua biblioteca Matematica --> mat
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 5106; 
+ * @POSICAO-CURSOR = 1779; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
