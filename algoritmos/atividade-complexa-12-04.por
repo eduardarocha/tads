@@ -116,7 +116,7 @@ inclua biblioteca Matematica --> mat
 		}
 	}
 
-	funcao vazio posicao() {
+	funcao vazio jogo() {
 		posicao_X()
 		posicao_O()
 	}
@@ -124,9 +124,9 @@ inclua biblioteca Matematica --> mat
 	funcao inicio() {
 		escreva("\nA | B | C\n--|---|--\nD | E | F\n--|---|--\nG | H | I\n")
 		faca {
-			escreva("\nX : Escolha uma posição: ") leia(pX) posicao()
+			escreva("\nX : Escolha uma posição: ") leia(pX) posicao_X()
 			vencedor()
-			escreva("\nO : Escolha uma posição: ") leia(pO) posicao()
+			escreva("\nO : Escolha uma posição: ") leia(pO) posicao_O()
 			vencedor()
 		} enquanto (vitoria == 0)
 	}
@@ -136,7 +136,7 @@ inclua biblioteca Matematica --> mat
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 2088; 
+ * @POSICAO-CURSOR = 2016; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
