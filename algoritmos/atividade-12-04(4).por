@@ -75,62 +75,44 @@ inclua biblioteca Matematica --> mat
 	funcao vazio posicao_X() {		
 		se (pX == 'A') {
 			A = 1
-			escreva("\nX |   |  \n--|---|--\n  |   |  \n--|---|--\n  |   |  \n")
 		} senao se (pX == 'B') {
 			B = 1
-			escreva("\n  | X |  \n--|---|--\n  |   |  \n--|---|--\n  |   |  \n")
 		} senao se (pX == 'C') {
 			C = 1
-			escreva("\n  |   | X\n--|---|--\n  |   |  \n--|---|--\n  |   |  \n")
 		} senao se (pX == 'D') {
 			D = 1
-			escreva("\n  |   |  \n--|---|--\nX |   |  \n--|---|--\n  |   |  \n")
 		} senao se (pX == 'E') {
 			E = 1
-			escreva("\n  |   |  \n--|---|--\n  | X |  \n--|---|--\n  |   |  \n")
 		} senao se (pX == 'F') {
 			F = 1
-			escreva("\n  |   |  \n--|---|--\n  |   | X\n--|---|--\n  |   |  \n")
 		} senao se (pX == 'G') {
 			G = 1
-			escreva("\n  |   |  \n--|---|--\n  |   |  \n--|---|--\nX |   |  \n")
 		} senao se (pX == 'H') {
 			H = 1
-			escreva("\n  |   |  \n--|---|--\n  |   |  \n--|---|--\n  | X |  \n")
 		} senao se (pX == 'I') {
 			I = 1
-			escreva("\n  |   |  \n--|---|--\n  |   |  \n--|---|--\n  |   | X\n")
 		}
 	}
 
 	funcao vazio posicao_O() {		
 		se (pO == 'A') {
 			A = 1
-			escreva("\nO |   |  \n--|---|--\n  |   |  \n--|---|--\n  |   |  \n")
 		} senao se (pO == 'B') {
 			B = 1
-			escreva("\n  | O |  \n--|---|--\n  |   |  \n--|---|--\n  |   |  \n")
 		} senao se (pO == 'C') {
 			C = 1
-			escreva("\n  |   | O\n--|---|--\n  |   |  \n--|---|--\n  |   |  \n")
 		} senao se (pO == 'D') {
 			D = 1
-			escreva("\n  |   |  \n--|---|--\nO |   |  \n--|---|--\n  |   |  \n")
 		} senao se (pO == 'E') {
 			E = 1
-			escreva("\n  |   |  \n--|---|--\n  | O |  \n--|---|--\n  |   |  \n")
 		} senao se (pO == 'F') {
 			F = 1
-			escreva("\n  |   |  \n--|---|--\n  |   | O\n--|---|--\n  |   |  \n")
 		} senao se (pO == 'G') {
 			G = 1
-			escreva("\n  |   |  \n--|---|--\n  |   |  \n--|---|--\nO |   |  \n")
 		} senao se (pO == 'H') {
 			H = 1
-			escreva("\n  |   |  \n--|---|--\n  |   |  \n--|---|--\n  | O |  \n")
 		} senao se (pO == 'I') {
 			I = 1
-			escreva("\n  |   |  \n--|---|--\n  |   |  \n--|---|--\n  |   | O\n")
 		}
 	}
 
@@ -154,7 +136,7 @@ inclua biblioteca Matematica --> mat
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 401; 
+ * @POSICAO-CURSOR = 2088; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
