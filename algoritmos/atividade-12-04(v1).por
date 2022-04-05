@@ -16,7 +16,6 @@ inclua biblioteca Matematica --> mat
 			escreva("(!) Erro de entrada: O programa reiniciou-se.\n\n")
 			inicio()
 		}
-
 		escreva(enunciado, cA, " | B |  \n--|---|--\n  |   |  \n--|---|--\n  |   |  \n\nB : ") leia(cB) limpa()
 		se (cB == "x") {
 			B = 1
@@ -28,7 +27,6 @@ inclua biblioteca Matematica --> mat
 			escreva("(!) Erro de entrada: O programa reiniciou-se.\n")
 			inicio()
 		}
-
 		escreva(enunciado, cA, " | ", cB," | C\n--|---|--\n  |   |  \n--|---|--\n  |   |  \n\nC : ") leia(cC) limpa()
 		se (cC == "x") {
 			C = 1
@@ -40,7 +38,6 @@ inclua biblioteca Matematica --> mat
 			escreva("(!) Erro de entrada: O programa reiniciou-se.\n")
 			inicio()
 		}
-
 		escreva(enunciado, cA, " | ", cB," | ", cC,"\n--|---|--\nD |   |  \n--|---|--\n  |   |  \n\nD : ") leia(cD) limpa()
 		se (cD == "x") {
 			D = 1
@@ -52,7 +49,6 @@ inclua biblioteca Matematica --> mat
 			escreva("(!) Erro de entrada: O programa reiniciou-se.\n")
 			inicio()
 		}
-
 		escreva(enunciado, cA, " | ", cB," | ", cC,"\n--|---|--\n", cD," | E |  \n--|---|--\n  |   |  \n\nE : ") leia(cE) limpa()
 		se (cE == "x") {
 			E = 1
@@ -64,7 +60,6 @@ inclua biblioteca Matematica --> mat
 			escreva("(!) Erro de entrada: O programa reiniciou-se.\n")
 			inicio()
 		}
-
 		escreva(enunciado, cA, " | ", cB," | ", cC,"\n--|---|--\n", cD," | ", cE," | F\n--|---|--\n  |   |  \n\nF : ") leia(cF) limpa()
 		se (cF == "x") {
 			F = 1
@@ -76,8 +71,6 @@ inclua biblioteca Matematica --> mat
 			escreva("(!) Erro de entrada: O programa reiniciou-se.\n")
 			inicio()
 		}
-
-		
 		escreva(enunciado, cA, " | ", cB," | ", cC,"\n--|---|--\n", cD," | ", cE," | ", cF,"\n--|---|--\nG |   |  \n\nG : ") leia(cG) limpa()
 		se (cG == "x") {
 			G = 1
@@ -89,8 +82,6 @@ inclua biblioteca Matematica --> mat
 			escreva("(!) Erro de entrada: O programa reiniciou-se.\n")
 			inicio()
 		}
-
-		
 		escreva(enunciado, cA, " | ", cB," | ", cC,"\n--|---|--\n", cD," | ", cE," | ", cF,"\n--|---|--\n", cG," | H |  \n\nH : ") leia(cH) limpa()
 		se (cH == "x") {
 			H = 1
@@ -102,8 +93,6 @@ inclua biblioteca Matematica --> mat
 			escreva("(!) Erro de entrada: O programa reiniciou-se.\n")
 			inicio()
 		}
-
-		
 		escreva(enunciado, cA, " | ", cB," | ", cC,"\n--|---|--\n", cD," | ", cE," | ", cF,"\n--|---|--\n", cG," | ", cH," | I\n\nI : ") leia(cI) limpa()
 		se (cI == "x") {
 			I = 1
@@ -115,9 +104,8 @@ inclua biblioteca Matematica --> mat
 			escreva("(!) Erro de entrada: O programa reiniciou-se.\n")
 			inicio()
 		}
-
+		
 		escreva(cA, " | ", cB," | ", cC,"\n--|---|--\n", cD," | ", cE," | ", cF,"\n--|---|--\n", cG," | ", cH," | ", cI,"\n")
-
 		se ((A == 1 e B == 1 e C == 1) ou (A == 0 e B == 0 e C == 0)) {
 			se (A == 1 e B == 1 e C == 1) {
 				escreva("\nX : Vitória!\n")
@@ -176,7 +164,7 @@ inclua biblioteca Matematica --> mat
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 73; 
+ * @POSICAO-CURSOR = 3217; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
