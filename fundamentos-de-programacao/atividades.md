@@ -21,6 +21,7 @@ int main(void) {
 	printf("Reais: R$"); scanf("%f", &reais);
 	total = reais / dolar;
 	printf("Total em dolar: R$%.2f", total);
+	return 0;
 }
 ```
 
@@ -53,6 +54,7 @@ int main(void) {
 	printf("Fahrenheit: "); scanf("%f", &fahrenheit);
 	celsius = (fahrenheit - 32.0) / (9.0 / 5.0);
 	printf("Celsius: %.2f", celsius);
+	return 0;
 }
 ```
 
@@ -69,6 +71,7 @@ int main(void) {
 	printf("Espaco de tempo (min): "); scanf("%f", &tempo);
 	velocidade = (distancia * 1000) / (tempo * 60);
 	printf("Velocidade (ms): %.2f", velocidade);
+	return 0;
 }
 ```
 
@@ -89,5 +92,89 @@ int main(void) {
     venda = venda * quantidade; venda -= venda * emolumentos;
     total = (venda - compra) - (corretagem * 2);
 	printf("Total: R$ %.2f", total);
+	return 0;
 }
+```
+
+
+## Aula 04/04
+**01.** Implemente um programa que recebe a nota de um aluno e retorna o valor da sua bolsa-auxílio
+conforme a tabela abaixo:
+
+7 ≤ nota < 80 : R$ 500,00
+
+8 ≤ nota < 90 : R$ 700,00
+
+nota ≥ 9 : R$ 900,00
+
+nota < 7 : R$ 0,00 (sem bolsa)
+``` c++
+# include <stdio.h>
+int main(void) {
+    int nota;
+    printf("Nota: "); scanf("%d", &nota);
+    
+    if (nota >= 90) {
+        printf("Bolsa: R$ 900,0");
+    } else {
+        if (nota >= 80 and nota < 90) {
+            printf("Bolsa: R$ 700,0");
+        } else {
+            if (nota >= 70 and nota < 80) {
+                printf("Bolsa: R$ 500,0");
+            } else {
+                printf("Sem bolsa.");
+            }
+        }
+    }
+    return 0;
+}
+```
+
+**02.** Uma empresa resolveu dar um aumento de salário aos seus empregados e lhe contrataram para
+desenvolver um programa para calcular os reajustes. Faça um programa que recebe o salário de um colaborador e o calcule reajuste baseado no salário atual:
+* faixa de salário até R$ 1200,00 (incluindo) : aumento de 20%
+* faixa de salário entre R$ 1200,01 e R$ 1700,00 : aumento de 15%
+* faixa de salário entre R$ 1700,01 e R$ 2500,00 : aumento de 10%
+* faixa de salário de R$ 2500,01 em diante : aumento de 5%
+
+Após o aumento ser realizado, informe:
+* o salário antes do reajuste;
+* o valor do aumento;
+* o novo salário, após o aumento.
+``` c++
+# include <stdio.h>
+int main(void) {
+    float salarioAtual, aumento;
+    int reajuste;
+    printf("Salário atual: R$ "); scanf("%f", &salarioAtual);
+    
+    if (salarioAtual > 0 and salarioAtual <= 1200) {
+        reajuste = 20;
+    } else {
+        if (salarioAtual > 1200 and salarioAtual <= 1700) {
+            reajuste = 15;
+        } else {
+            if (salarioAtual > 1700 and salarioAtual <= 2500) {
+                reajuste = 10;
+            } else {
+                reajuste = 5;
+            }
+        }
+    }
+    aumento = salarioAtual * (float(reajuste) / 100);
+    salarioAtual += aumento;
+    printf("Salário com reajuste de %d%: R$ %.2f\nValor do aumento: R$ %.2f\n", reajuste, salarioAtual, aumento);
+    return 0;
+}
+```
+
+**03.** 
+``` c++
+
+```
+
+**04.** 
+``` c++
+
 ```
