@@ -1,9 +1,8 @@
 programa {
 inclua biblioteca Matematica --> mat
 	funcao inicio() {
-
+        // Questão 01
 		/*
-		// Questão 01
 		real l, c, a
 		escreva("Largura: ") leia(l)
 		escreva("Comprimento: ") leia(c)
@@ -11,23 +10,21 @@ inclua biblioteca Matematica --> mat
 		escreva("Área: ", a)
 		*/
 
+
 		// Questão 02
 		
-		
-		/*
-        	// Questão 13
-        	inteiro n, cen, dez, uni
-        	escreva("Número inteiro de 3 algarimos: ") leia(n)
-        	cen = n / 100
-        	dez = (n % 100) / 10
-        	uni = (n % 100) % 10
-        	escreva("Centena: ", cen * 100, "\nDezena: ", dez * 10, "\nUnidade: ", uni)
-        	*/
 
+        // Questão 13
+        /*
+        inteiro n, cen, dez, uni
+        escreva("Número inteiro de 3 algarimos: ") leia(n)
+        cen = n / 100
+        dez = (n % 100) / 10
+        uni = (n % 100) % 10
+        escreva("Centena: ", cen * 100, "\nDezena: ", dez * 10, "\nUnidade: ", uni)
+        */
 
-
-        	
-        	
+	
         /*
         real si, sa, sf
         escreva("Salário inicial: ")
@@ -39,6 +36,7 @@ inclua biblioteca Matematica --> mat
         escreva("\nFinal: R$", sf)
         */
         
+
         /*
         real q350, q600, q2, total
         escreva("Quantidade com 350ml: ")
@@ -53,6 +51,7 @@ inclua biblioteca Matematica --> mat
         total = (q350 + q600 + q2) / 1000
         escreva("Total em litros: ", total)
         */
+
         
         /*
         real m1c, m5c, m10c, m25c, m50c, m1r, total
@@ -67,6 +66,7 @@ inclua biblioteca Matematica --> mat
         escreva("Total em reais: R$", total)
         */
         
+
         /*
         real r, h, v
         escreva("Raio: ") leia(r)
@@ -75,6 +75,7 @@ inclua biblioteca Matematica --> mat
         escreva("Volume: ", v)
         */
         
+
         /*
         real l, agua, suco
         escreva("Litros de suco: ") leia(l)
@@ -82,6 +83,7 @@ inclua biblioteca Matematica --> mat
         suco = (l * 0.02) * 100
         escreva("Porcentagem de água: ", agua, "%", "\nPorcentagem de suco: ", suco, "%")
         */
+        
         
         /*
         real conta, carlos, andre, felipe
@@ -95,14 +97,3 @@ inclua biblioteca Matematica --> mat
         */
     }
 }
-/* $$$ Portugol Studio $$$ 
- * 
- * Esta seção do arquivo guarda informações do Portugol Studio.
- * Você pode apagá-la se estiver utilizando outro editor.
- * 
- * @POSICAO-CURSOR = 241; 
- * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = ;
- * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
- * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
- */

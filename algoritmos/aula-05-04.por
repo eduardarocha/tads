@@ -1,10 +1,9 @@
-programa {
+programa {
 inclua biblioteca Matematica --> mat
-	funcao inicio() {
+	funcao inicio() {
 		// Questão 01
 		/*
 		inteiro dia
-		
 		escreva("Dia da semana : ") leia(dia)
 
 		escolha (dia) {
@@ -36,7 +35,6 @@ inclua biblioteca Matematica --> mat
 		// Questão 02
 		/*
 		inteiro dia, mes, ano
-
 		escreva("Dia : ") leia(dia)
 		escreva("Mes : ") leia(mes)
 		escreva("Ano : ") leia(ano)
@@ -82,14 +80,3 @@ inclua biblioteca Matematica --> mat
 		*/
 	}
 }
-/* $$$ Portugol Studio $$$ 
- * 
- * Esta seção do arquivo guarda informações do Portugol Studio.
- * Você pode apagá-la se estiver utilizando outro editor.
- * 
- * @POSICAO-CURSOR = 1385; 
- * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = ;
- * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
- * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
- */
