@@ -27,8 +27,7 @@ int main(void) {
 
 
 ## Aula 02
-**01.** Fazer um programa em C que pergunta um valor em metros e imprime o
-correspondente em decímetros, centímetros e milímetros.
+**01.** Fazer um programa em C que pergunta um valor em metros e imprime o correspondente em decímetros, centímetros e milímetros.
 ``` c++
 # include <stdio.h>
 # include <math.h>
@@ -43,8 +42,7 @@ int main(void) {
 }
 ```
 
-**02.** Fazer um programa em "C" que pergunte um valor em graus Fahrenheit e imprime no
-vídeo o correspondente em graus Celsius usando a fórmula a seguir:
+**02.** Fazer um programa em "C" que pergunte um valor em graus Fahrenheit e imprime no vídeo o correspondente em graus Celsius usando a fórmula a seguir:
 C=(F - 32.0) / (9.0/5.0).
 ``` c++
 # include <stdio.h>
@@ -58,10 +56,7 @@ int main(void) {
 }
 ```
 
-**03.** Faça um programa que calcule e apresente em metros por segundo o valor da
-velocidade de um projétil que percorre uma determinada distância em quilômetros a um
-determinado espaço de tempo em minutos.
-Utilize a fórmula: VELOCIDADE ← (DISTÂNCIA * 1000) / (TEMPO * 60).
+**03.** Faça um programa que calcule e apresente em metros por segundo o valor da velocidade de um projétil que percorre uma determinada distância em quilômetros a um determinado espaço de tempo em minutos. Utilize a fórmula: VELOCIDADE ← (DISTÂNCIA * 1000) / (TEMPO * 60).
 ``` c++
 # include <stdio.h>
 # include <math.h>
@@ -75,11 +70,7 @@ int main(void) {
 }
 ```
 
-**04.** Faça um programa para calcular e mostrar o valor do lucro ou prejuízo na compra e
-venda de ações. O programa deverá ler o preço de compra da ação, o preço de venda e a
-quantidade de ações. Além disso deverá deduzir do resultado o valor da corretagem e dos
-emolumentos. O valor da corretagem é $ 12.00 por operação de compra ou venda. Os
-emolumentos que são 2% do valor da operação sem considerar os emolumentos.
+**04.** Faça um programa para calcular e mostrar o valor do lucro ou prejuízo na compra e venda de ações. O programa deverá ler o preço de compra da ação, o preço de venda e a quantidade de ações. Além disso deverá deduzir do resultado o valor da corretagem e dos emolumentos. O valor da corretagem é $ 12.00 por operação de compra ou venda. Os emolumentos que são 2% do valor da operação sem considerar os emolumentos.
 ``` c++
 # include <stdio.h>
 # include <math.h>
@@ -98,8 +89,7 @@ int main(void) {
 
 
 ## Aula 04/04
-**01.** Implemente um programa que recebe a nota de um aluno e retorna o valor da sua bolsa-auxílio
-conforme a tabela abaixo:
+**01.** Implemente um programa que recebe a nota de um aluno e retorna o valor da sua bolsa-auxílio conforme a tabela abaixo:
 
 7 ≤ nota < 80 : R$ 500,00
 
@@ -131,8 +121,7 @@ int main(void) {
 }
 ```
 
-**02.** Uma empresa resolveu dar um aumento de salário aos seus empregados e lhe contrataram para
-desenvolver um programa para calcular os reajustes. Faça um programa que recebe o salário de um colaborador e o calcule reajuste baseado no salário atual:
+**02.** Uma empresa resolveu dar um aumento de salário aos seus empregados e lhe contrataram para desenvolver um programa para calcular os reajustes. Faça um programa que recebe o salário de um colaborador e o calcule reajuste baseado no salário atual:
 * faixa de salário até R$ 1200,00 (incluindo) : aumento de 20%
 * faixa de salário entre R$ 1200,01 e R$ 1700,00 : aumento de 15%
 * faixa de salário entre R$ 1700,01 e R$ 2500,00 : aumento de 10%
@@ -169,12 +158,52 @@ int main(void) {
 }
 ```
 
-**03.** 
+**03.** Um ciclone tropical consiste em uma tempestade muito violenta que, sob determinadas condições, adquire um movimento de rotação em torno de uma região de baixa pressão atmosférica. Um ciclone pode atingir um diâmetro de até 500 km. Furacões são os mais violentos desses ciclones e chegam a produzir ventos de até 320 km/h. Na tabela abaixo, são apresentados alguns dados relativos à classificação dos furacões segundo a escala Saffir-Simpson:
+* tempestade tropical 62 a 118 km/h
+* furacão de categoria 1 119 a 153 km/h
+* furacão de categoria 2 154 a 177 km/h
+* furacão de categoria 3 178 a 209 km/h
+* furacão de categoria 4 210 a 249 km/h
+* furacão de categoria 5 maior que 249 km/h
 ``` c++
+# include <stdio.h>
+int main(void) {
+    float velocidade;
+    printf("Velocidade dos ventos (km/h): "); scanf("%f", &velocidade);
 
+    if (velocidade >= 62 and velocidade <= 119) {
+        printf("Tempestade tropical");
+    } else {
+        if (velocidade > 119 and velocidade <= 154) {
+            printf("Furacão de categoria 1");
+        } else {
+            if (velocidade > 154 and velocidade <= 178) {
+                printf("Furacão de categoria 2");
+            } else {
+                if (velocidade > 178 and velocidade <= 210) {
+                    printf("Furacão de categoria 3");
+                } else {
+                    if (velocidade > 210 and velocidade <= 250) {
+                        printf("Furacão de categoria 4");
+                    } else {
+                        printf("Furacão de categoria 5");
+                    }
+                }
+            }
+        }
+    }
+    return 0;
+}
 ```
 
-**04.** 
+**04.** Faça um programa que lê as duas notas parciais obtidas por um aluno numa disciplina ao longo de um semestre, e calcule a sua média. A atribuição de conceitos obedece à tabela abaixo:
+* Entre 9.0 e 10.0 = A
+* Entre 7.5 e 9.0 = B
+* Entre 6.0 e 7.5 = C
+* Entre 4.0 e 6.0 = D
+* Entre 4.0 e zero = E
+
+O algoritmo deve mostrar na tela as notas, a média, o conceito correspondente e a mensagem “APROVADO” se o conceito for A, B ou C ou “REPROVADO” se o conceito for D ou E.
 ``` c++
 
 ```
