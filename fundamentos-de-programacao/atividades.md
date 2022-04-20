@@ -1,6 +1,6 @@
 ## Aula 01
 **01.** Faça um programa que leia o ano atual e o ano de nascimento de uma pessoa, calcule e mostre a sua idade.
-``` c++
+``` c
 #include <stdio.h>
 int main(void) {
 	int anoAtual, anoNasc, idade;
@@ -13,7 +13,7 @@ int main(void) {
 ```
 
 **02.** Faça um programa que leia o valor da cotação do dolar atual e um valor em reais, calcule e mostre a quantidade de dolares que só é possível ser comparada com o valor lido. (float)
-``` c++
+``` c
 #include <stdio.h>
 int main(void) {
 	float dolar, reais, total;
@@ -28,7 +28,7 @@ int main(void) {
 
 ## Aula 02
 **01.** Fazer um programa em C que pergunta um valor em metros e imprime o correspondente em decímetros, centímetros e milímetros.
-``` c++
+``` c
 # include <stdio.h>
 # include <math.h>
 int main(void) {
@@ -44,7 +44,7 @@ int main(void) {
 
 **02.** Fazer um programa em "C" que pergunte um valor em graus Fahrenheit e imprime no vídeo o correspondente em graus Celsius usando a fórmula a seguir:
 C=(F - 32.0) / (9.0/5.0).
-``` c++
+``` c
 # include <stdio.h>
 # include <math.h>
 int main(void) {
@@ -57,7 +57,7 @@ int main(void) {
 ```
 
 **03.** Faça um programa que calcule e apresente em metros por segundo o valor da velocidade de um projétil que percorre uma determinada distância em quilômetros a um determinado espaço de tempo em minutos. Utilize a fórmula: VELOCIDADE ← (DISTÂNCIA * 1000) / (TEMPO * 60).
-``` c++
+``` c
 # include <stdio.h>
 # include <math.h>
 int main(void) {
@@ -71,7 +71,7 @@ int main(void) {
 ```
 
 **04.** Faça um programa para calcular e mostrar o valor do lucro ou prejuízo na compra e venda de ações. O programa deverá ler o preço de compra da ação, o preço de venda e a quantidade de ações. Além disso deverá deduzir do resultado o valor da corretagem e dos emolumentos. O valor da corretagem é $ 12.00 por operação de compra ou venda. Os emolumentos que são 2% do valor da operação sem considerar os emolumentos.
-``` c++
+``` c
 # include <stdio.h>
 # include <math.h>
 int main(void) {
@@ -88,7 +88,7 @@ int main(void) {
 ```
 
 
-## Aula 04/04
+## Aula 03 (04/04)
 **01.** Implemente um programa que recebe a nota de um aluno e retorna o valor da sua bolsa-auxílio conforme a tabela abaixo:
 
 7 ≤ nota < 80 : R$ 500,00
@@ -98,7 +98,7 @@ int main(void) {
 nota ≥ 9 : R$ 900,00
 
 nota < 7 : R$ 0,00 (sem bolsa)
-``` c++
+``` c
 # include <stdio.h>
 int main(void) {
     int nota;
@@ -131,7 +131,7 @@ Após o aumento ser realizado, informe:
 * o salário antes do reajuste;
 * o valor do aumento;
 * o novo salário, após o aumento.
-``` c++
+``` c
 # include <stdio.h>
 int main(void) {
     float salarioAtual, aumento;
@@ -165,7 +165,7 @@ int main(void) {
 * furacão de categoria 3 178 a 209 km/h
 * furacão de categoria 4 210 a 249 km/h
 * furacão de categoria 5 maior que 249 km/h
-``` c++
+``` c
 # include <stdio.h>
 int main(void) {
     float velocidade;
@@ -204,6 +204,38 @@ int main(void) {
 * Entre 4.0 e zero = E
 
 O algoritmo deve mostrar na tela as notas, a média, o conceito correspondente e a mensagem “APROVADO” se o conceito for A, B ou C ou “REPROVADO” se o conceito for D ou E.
-``` c++
+``` c
+# include <stdio.h>
+int main(void) {
+    float n1, n2, media;
+    char conceito[1];
+    printf("Nota 1: "); scanf("%f", &n1);
+    printf("Nota 2: "); scanf("%f", &n2);
+    media = (n1 + n2) / 2;
 
+    if (media >= 0 and media < 4) {
+        conceito[1] = 'E';
+        printf("\nReprovado(a)");
+    } else {
+        if (media >= 4 and media < 6) {
+            conceito[1] = 'D';
+            printf("\nReprovado(a)");
+        } else {
+            if (media >= 6 and media < 7.5) {
+                conceito[1] = 'C';
+                printf("\nAprovado(a)");
+            } else {
+                if (media >= 7.5 and media < 9) {
+                    conceito[1] = 'B';
+                    printf("\nAprovado(a)");
+                } else {
+                    conceito[1] = 'A';
+                    printf("\nAprovado(a)");
+                }
+            }
+        }
+    }
+    printf("\nConceito: %c\nMedia: %.2f", conceito[1], media);
+    return 0;
+}
 ```

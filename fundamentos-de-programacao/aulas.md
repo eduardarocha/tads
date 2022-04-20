@@ -1,15 +1,16 @@
-# C++
-## Aula 01
+# C
 ### Preprocessadores
 
-`#include <stdio.h>` : Biblioteca input/output.
+`# include <stdio.h>` : Biblioteca input/output.
 
-`#include <windows.h>` : Biblioteca com declarações para todas as funções na API do Windows.
+`# include <string.h>` : Biblioteca de manipulação string (caracter[n], sendo n  > 1).
+
+`# include <windows.h>` : Biblioteca com declarações para todas as funções na API do Windows.
 * `system("pause");` : Pausar programa.
 
 ### Subprograma/função principal
 
-``` c++
+``` c
 int main(void) {
 	// Instruções...
 	return 0;
@@ -21,6 +22,8 @@ int main(void) {
 
 **Especificador de formato:**
 
+`&var` : Permite o endereçamento na memória.
+
 `"%d", &var` : Inteiro.
 
 `"%f", &var` : Float.
@@ -28,11 +31,10 @@ int main(void) {
 
 `"%c", &var` : Caracter.
 
-`&var` : Permite o endereçamento na memória.
+`"%s", &var` : Caracter[n], sendo n > 1.
 
-**Em arquivo main.py:**
-
-```c++
+**Em arquivo teste.cpp, usando o tipo de variável int:**
+``` c
 #include <stdio.h>
 int main(void) {
 	int n1, n2, n3, soma;
@@ -45,5 +47,14 @@ int main(void) {
 }
 ```
 
-
-## Aula 02
+**Em arquivo teste.cpp, usando o tipo de variável char:**
+``` c
+# include <stdio.h>
+#include <string.h>
+int main(void) {
+    char conceito[10] = "";
+    printf("Caracteres: "); scanf("%s", &conceito);
+    printf("\nResposta: %s", conceito);
+    return 0;
+}
+```
