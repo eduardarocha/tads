@@ -160,7 +160,71 @@ int main(void) {
 
 **03.** Um ciclone tropical consiste em uma tempestade muito violenta que, sob determinadas condições, adquire um movimento de rotação em torno de uma região de baixa pressão atmosférica. Um ciclone pode atingir um diâmetro de até 500 km. Furacões são os mais violentos desses ciclones e chegam a produzir ventos de até 320 km/h. Na tabela abaixo, são apresentados alguns dados relativos à classificação dos furacões segundo a escala Saffir-Simpson:
 * tempestade tropical 62 a 118 km/h
-* furacão de categoria 1 119 a 153 km/h
+* furacão de categoria 1 119 a 153 km/h# include <stdio.h>
+int main(void) {
+    float n1, n2, media;
+    char conceito[1];# include <stdio.h>
+int main(void) {
+    float n1, n2, media;
+    char conceito[1];
+    printf("Nota 1: "); scanf("%f", &n1);
+    printf("Nota 2: "); scanf("%f", &n2);
+    media = (n1 + n2) / 2;
+
+    if (media >= 0 and media < 4) {
+        conceito[1] = 'E';
+        printf("\nReprovado(a)");
+    } else {
+        if (media >= 4 and media < 6) {
+            conceito[1] = 'D';
+            printf("\nReprovado(a)");
+        } else {
+            if (media >= 6 and media < 7.5) {
+                conceito[1] = 'C';
+                printf("\nAprovado(a)");
+            } else {
+                if (media >= 7.5 and media < 9) {
+                    conceito[1] = 'B';
+                    printf("\nAprovado(a)");
+                } else {
+                    conceito[1] = 'A';
+                    printf("\nAprovado(a)");
+                }
+            }
+        }
+    }
+    printf("\nConceito: %c\nMedia: %.2f", conceito[1], media);
+    return 0;
+}
+    printf("Nota 1: "); scanf("%f", &n1);
+    printf("Nota 2: "); scanf("%f", &n2);
+    media = (n1 + n2) / 2;
+
+    if (media >= 0 and media < 4) {
+        conceito[1] = 'E';
+        printf("\nReprovado(a)");
+    } else {
+        if (media >= 4 and media < 6) {
+            conceito[1] = 'D';
+            printf("\nReprovado(a)");
+        } else {
+            if (media >= 6 and media < 7.5) {
+                conceito[1] = 'C';
+                printf("\nAprovado(a)");
+            } else {
+                if (media >= 7.5 and media < 9) {
+                    conceito[1] = 'B';
+                    printf("\nAprovado(a)");
+                } else {
+                    conceito[1] = 'A';
+                    printf("\nAprovado(a)");
+                }
+            }
+        }
+    }
+    printf("\nConceito: %c\nMedia: %.2f", conceito[1], media);
+    return 0;
+}
 * furacão de categoria 2 154 a 177 km/h
 * furacão de categoria 3 178 a 209 km/h
 * furacão de categoria 4 210 a 249 km/h
@@ -236,6 +300,54 @@ int main(void) {
         }
     }
     printf("\nConceito: %c\nMedia: %.2f", conceito[1], media);
-    return 0;
-}
+return 0; }
+```
+
+
+## Aula 04 (29/04)
+**01.** 
+``` c
+# include <stdio.h>
+int main(void) {
+    int n, soma = 0;
+
+    do {
+        printf("\nn = "); scanf("%d", &n);
+        if (n > 0) {
+            soma += n;
+        }
+    } while (n > 0);
+    printf("Soma: %d", soma);
+return 0; }
+```
+
+**02.** 
+``` c
+# include <stdio.h>
+int main(void) {
+    int menu;
+    bool i = true;
+    
+    do {
+        printf("\n1 - Cadastrar\n2 - Consultar\n3 - Alterar\n4 - Excluir\n5 - Sair\n\nEscolha: "); scanf("%d", &menu);
+        if (1 <= menu and menu <= 5) {
+            if (menu == 5) {
+                i = false;
+                printf("\nSaindo...\n");
+            } else {
+                if (menu == 1) {
+                    printf("\nVocê escolheu a opção Cadastrar.\n");
+                } else if (menu == 2) {
+                    printf("\nVocê escolheu a opção Consultar.\n");
+                } else if (menu == 3) {
+                    printf("\nVocê escolheu a opção Alterar.\n");
+                } else {
+                    printf("\nVocê escolheu a opção Excluir.\n");
+                }
+            }
+        } else {
+            printf("\nErro! Digite novamente.\n");
+        }
+    } while (i == true);
+return 0; }
 ```

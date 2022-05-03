@@ -1,30 +1,6 @@
 programa {
 inclua biblioteca Matematica --> mat
 	funcao inicio() {
-        // Questão 01
-		/*
-		real l, c, a
-		escreva("Largura: ") leia(l)
-		escreva("Comprimento: ") leia(c)
-		a = (l * 2) + (c * 2)
-		escreva("Área: ", a)
-		*/
-
-
-		// Questão 02
-		
-
-        // Questão 13
-        /*
-        inteiro n, cen, dez, uni
-        escreva("Número inteiro de 3 algarimos: ") leia(n)
-        cen = n / 100
-        dez = (n % 100) / 10
-        uni = (n % 100) % 10
-        escreva("Centena: ", cen * 100, "\nDezena: ", dez * 10, "\nUnidade: ", uni)
-        */
-
-	
         /*
         real si, sa, sf
         escreva("Salário inicial: ")

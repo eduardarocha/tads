@@ -7,6 +7,7 @@
 
 `# include <windows.h>` : Biblioteca com declarações para todas as funções na API do Windows.
 * `system("pause");` : Pausar programa.
+* `system("cls");` : Limpar tela.
 
 ### Subprograma/função principal
 
