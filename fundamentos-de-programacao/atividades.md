@@ -350,4 +350,86 @@ int main(void) {
         }
     } while (i == true);
 return 0; }
+``
+
+
+## Aula 05 (20/05)
+**01.** 
+``` c
+# include <stdio.h>
+void calc_idade(int nasc, int ano);
+
+int main(void) {
+    int nasc, ano;
+    printf("Ano de nascimento: "); scanf("%d", &nasc);
+    printf("Ano atual: "); scanf("%d", &ano);
+    calc_idade(nasc, ano);
+return 0; }
+
+void calc_idade(int nasc, int ano) {
+    int idade = ano - nasc;
+    if (idade < 18) {
+        printf("Criança, %d anos.\n", idade);
+    } else if (18 <= idade && idade < 65) {
+        printf("Adulto, %d anos.\n", idade);
+    } else if (65 <= idade) {
+        printf("Idoso, %d anos.\n", idade);
+    }
+}
+```
+
+**02.** 
+``` c
+# include <stdio.h>
+void calc_imc(float altura, char genero);
+
+int main(void) {
+    float altura, peso;
+    int genero;
+    printf("Altura: "); scanf("%f", &altura);
+    printf("Peso atual: "); scanf("%f", &peso);
+    printf("Gênero: "); scanf("%d", &genero);
+    calc_imc(altura, genero);
+return 0; }
+
+void calc_imc(float altura, char genero) {
+    float imc;
+    if (genero == 0) {
+        imc = (72.7 * altura) - 58;
+        printf("Peso ideal: %f Kg\n", imc);
+    } else if (genero == 1) {
+        imc = (62.1 * altura) - 44.7;
+        printf("Peso ideal: %f Kg\n", imc);
+    }
+}
+```
+
+**03.** 
+``` c
+# include <stdio.h>
+float bolsa(float nota);
+
+int main(void) {
+    float nota;
+    printf("Nota: "); scanf("%f", &nota);
+    printf("R$ %.2f\n", bolsa(nota));
+return 0; }
+
+float bolsa(float nota) {
+    float valor;
+    if (7 <= nota && nota < 8) {
+        valor = 500;
+    } else if (8 <= nota && nota < 9) {
+        valor = 700;
+    } else if (nota >= 9) {
+        valor = 900;
+    } else if (nota < 7) {
+        valor = 0;
+    }
+return valor; }
+```
+
+**04.** 
+``` c
+
 ```

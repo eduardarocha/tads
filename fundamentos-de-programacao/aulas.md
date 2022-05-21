@@ -1,6 +1,5 @@
 # C
-### Preprocessadores
-
+## Preprocessadores
 `# include <stdio.h>` : Biblioteca input/output.
 
 `# include <string.h>` : Biblioteca de manipulação string (caracter[n], sendo n  > 1).
@@ -9,8 +8,8 @@
 * `system("pause");` : Pausar programa.
 * `system("cls");` : Limpar tela.
 
-### Subprograma/função principal
 
+## Subprograma/função principal
 ``` c
 int main(void) {
 	// Instruções...
@@ -58,4 +57,33 @@ int main(void) {
     printf("\nResposta: %s", conceito);
     return 0;
 }
+```
+
+
+## Funções
+Declaração do protótipo de uma função ocorre, de forma simplificada, quando a função está definida depois da função principal `int main(void) {`.
+``` c
+int int calc_idade(int nasc, int ano);
+```
+
+Definição de uma função simples utilizando "**void**" como tipo de retorno e parâmetros: `hello();`.
+``` c
+void hello(void) {
+	printf("Olá, mundo!");
+}
+```
+
+Definição de uma função que utiliza "**void**" como tipo de retorno e um parâmetro do tipo "**char**": `hello("Olá, mundo!");`.
+``` c
+void hello(char n[15]) {
+	printf("%s", &n);
+}
+```
+
+Definição de uma função com retorno e parâmetros: `calc_idade(2004, 2022);`.
+``` c
+int calc_idade(int nasc, int ano) {
+	int idade;
+	idade = ano - nasc;
+return idade; }
 ```
