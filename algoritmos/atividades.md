@@ -169,8 +169,8 @@ inclua biblioteca Matematica --> mat
 Algoritmo "atividade-01"
 Var
 n, a, b, c : inteiro
-
 Inicio
+
 enquanto (0 <= n) e (n <= 200) faca
 	escreva("n = ")
 	leia(n)
@@ -192,16 +192,17 @@ fimenquanto
 escreval("A : ", a)
 escreval("B : ", b)
 escreval("C : ", c)
+
 Fimalgoritmo
 ```
 
 **02.** Escrever um algoritmo que lê um número não determinado de valores para m, todos inteiros e positivos, um de cada vez. Se m for par, verificar quantos divisores possui e escrever esta informação. Se m for ímpar e menor do que 12 calcular e escrever o fatorial de m. Se m for ímpar e maior ou igual a 12 calcular e escrever a soma dos inteiros de 1 até m.
 ``` visualg
-Algoritmo "atividade-01"
+Algoritmo "atividade-02"
 Var
 m, i, divisores, fatorial, soma : inteiro
-
 Inicio
+
 enquanto 0 < m faca
 	escreva("m = ")
 	leia(m)
@@ -230,35 +231,37 @@ enquanto 0 < m faca
 		fimse
 	fimse
 fimenquanto
+
 Fimalgoritmo
 ```
 
 **03.** Escrever um algoritmo que lê um número não determinados de valores a, todos inteiros e positivos, um de cada vez, e calcule e escreva a média aritmética dos valores lidos, a quantidade de valores pares, a quantidade de valores impares, a percentagem de valores pares e a percentagem de valores ímpares.
 ``` visualg
-Algoritmo "atividade-01"
+Algoritmo "atividade-03"
 Var
-a, i, soma, par, impar : inteiro
-media, percPar, percImpar : real
-
+a, i, soma, par, impar, media, percPar, percImpar : inteiro
 Inicio
+
 enquanto 0 <= a faca
 	escreva("a = ")
 	leia(a)
-	i <- i + 1
-	soma <- soma + a
-	se (a MOD 2 = 0) e (a <> 1) entao
-		par <- par + 1
-	senao
-		impar <- impar + 1
+	se 0 <= a entao
+		i <- i + 1
+		soma <- soma + a
+		se (a MOD 2 = 0) e (a <> 1) entao
+			par <- par + 1
+		senao
+			impar <- impar + 1
+		fimse
 	fimse
 fimenquanto
-
-media <- soma / i
+media <- soma DIV i
 escreval("Média = ", media)
-percPar <- (100 * par) / i
+percPar <- (100 * par) DIV i
 escreval("Pares = ", par, " | ", percPar, "%")
-percImpar <- (100 * impar) / i
+percImpar <- (100 * impar) DIV i
 escreval("Impares = ", impar, " | ", percImpar, "%")
+
 Fimalgoritmo
 ```
 
@@ -267,7 +270,6 @@ Fimalgoritmo
 **01.**
 ``` visualg
 ```
-
 
 1)A prefeitura de uma cidade fez uma pesquisa entre seus habitantes, coletando dados sobre o salário e número de filhos. A prefeitura deseja saber:  
 a) média do salário da população;
