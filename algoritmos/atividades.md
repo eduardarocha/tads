@@ -267,16 +267,29 @@ Fimalgoritmo
 
 
 ## Aula 08
-**01.**
+**01.** A prefeitura de uma cidade fez uma pesquisa entre seus habitantes, coletando dados sobre o salário e número de filhos. O final da leitura de dados se dará com a entrada de um salário negativo. A prefeitura deseja saber:  
+* média do salário da população;
+* média do número de filhos;
+* maior salário;
+* percentual de pessoas com salário até R$1200,00.
 ``` visualg
+Algoritmo "atividade-01"
+Var
+s, mediaS, mediaF, maior, perc : real
+f : inteiro
+Inicio
+
+enquanto salario < 0 faca
+	escreva("Salário: R$ ")
+	leia(s)
+	escreva("Filhos: ")
+	leia(f)
+	
+fimenquanto
+
+Fimalgoritmo
 ```
 
-1)A prefeitura de uma cidade fez uma pesquisa entre seus habitantes, coletando dados sobre o salário e número de filhos. A prefeitura deseja saber:  
-a) média do salário da população;
-b) média do número de filhos;
-c) maior salário;
-d) percentual de pessoas com salário até R$1200,00.
-O final da leitura de dados se dará com a entrada de um salário negativo 
 
 2) Em uma eleição presidencial existem quatro candidatos. Os votos são informados através de  códigos. Os dados utilizados para a contagem dos  votos obedecem à seguinte codificação:
 1,2,3,4 = voto para os respectivos candidatos;
