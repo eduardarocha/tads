@@ -267,3 +267,24 @@ Fimalgoritmo
 **01.**
 ``` visualg
 ```
+
+
+1)A prefeitura de uma cidade fez uma pesquisa entre seus habitantes, coletando dados sobre o salário e número de filhos. A prefeitura deseja saber:  
+a) média do salário da população;
+b) média do número de filhos;
+c) maior salário;
+d) percentual de pessoas com salário até R$1200,00.
+O final da leitura de dados se dará com a entrada de um salário negativo 
+
+2) Em uma eleição presidencial existem quatro candidatos. Os votos são informados através de  códigos. Os dados utilizados para a contagem dos  votos obedecem à seguinte codificação:
+1,2,3,4 = voto para os respectivos candidatos;
+5 = voto nulo;
+6 = voto em branco;
+Elabore um algoritmo que leia o código do candidato em um voto. Calcule e escreva:
+- total de votos para cada candidato;
+- total de votos nulos;
+- total de votos em branco;
+Como finalizador do conjunto de votos, tem-se o valor 0
+
+
+3)Uma empresa deseja aumentar seus preços em 20%. Faça um algoritmo que leia o código e o preço de custo de cada produto e calcule o preço novo. Calcule também, a média dos preços com e sem aumento. Mostre o código e o preço novo de cada produto e, no final, as médias. A entrada de dados deve terminar quando for lido um código de produto negativo.
