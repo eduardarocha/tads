@@ -431,5 +431,18 @@ return valor; }
 
 **04.** 
 ``` c
+# include <stdio.h>
+# include <windows.h>
+int calc_minutos(int h1, int m1, int h2, int m2);
 
+int main(void) {
+    int h1, m1, h2, m2;
+    scanf("%d", &h1); system("cls"); printf("%d : ", h1); scanf("%d", &m1);
+    scanf("%d", &h2); system("cls"); printf("%d : %d\n%d : ", h1, m1, h2); scanf("%d", &m2);
+    printf("Tempo decorrido de %d minutos.", calc_minutos(h1, m1, h2, m2));
+return 0; }
+
+int calc_minutos(int h1, int m1, int h2, int m2) {
+    int minutos = ((h2 - h1) * 60) + (m2 - m1);
+return minutos; }
 ```

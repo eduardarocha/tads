@@ -149,3 +149,121 @@ inclua biblioteca Matematica --> mat
 	}
 }
 ```
+
+
+## Aula 05
+**01.**
+``` visualg
+```
+
+
+## Aula 06
+**01.**
+``` visualg
+```
+
+
+## Aula 07 (12/04)
+**01.** Escrever um algoritmo que lê um número não conhecido de valores, um de cada vez, e conta quantos deles estão em cada um dos intervalos [0, 50], (50, 100], (100,200]. O algoritmo deve encerrar quando for informado um valor fora dos intervalos.
+``` visualg
+Algoritmo "atividade-01"
+Var
+n, a, b, c : inteiro
+
+Inicio
+enquanto (0 <= n) e (n <= 200) faca
+	escreva("n = ")
+	leia(n)
+	se (0 <= n) e (n <= 50) entao
+        a <- a + 1
+        escreval("A - Intervalo [0, 50]")
+	senao
+		se (50 < n) e (n <= 100) entao
+        	b <- b + 1
+        	escreval("B - Intervalo (50, 100]")
+		senao
+			se (100 < n) e (n <= 200) entao
+    			c <- c + 1
+				escreval("C - Intervalo (100, 200]")
+			fimse
+		fimse
+	fimse
+fimenquanto
+escreval("A : ", a)
+escreval("B : ", b)
+escreval("C : ", c)
+Fimalgoritmo
+```
+
+**02.** Escrever um algoritmo que lê um número não determinado de valores para m, todos inteiros e positivos, um de cada vez. Se m for par, verificar quantos divisores possui e escrever esta informação. Se m for ímpar e menor do que 12 calcular e escrever o fatorial de m. Se m for ímpar e maior ou igual a 12 calcular e escrever a soma dos inteiros de 1 até m.
+``` visualg
+Algoritmo "atividade-01"
+Var
+m, i, divisores, fatorial, soma : inteiro
+
+Inicio
+enquanto 0 < m faca
+	escreva("m = ")
+	leia(m)
+	se m % 2 = 0 entao
+		divisores <- 0
+		para i de 1 ate m faca
+			se m MOD i = 0 entao
+				divisores <- divisores + 1
+				escreval(i)
+			fimse
+		fimpara
+		escreval("Quantidade de divisores de m = ", divisores)
+	senao
+		se m < 12 entao
+			fatorial <- 1
+			para i de m ate 1 passo -1 faca
+				fatorial <- fatorial * i
+			fimpara
+			escreval("Fatorial de m = ", fatorial)
+		senao
+			soma <- 0
+			para i de 1 ate m faca
+				soma <- soma + i
+			fimpara
+			escreval("Soma dos números entre 1 até m = ", soma)
+		fimse
+	fimse
+fimenquanto
+Fimalgoritmo
+```
+
+**03.** Escrever um algoritmo que lê um número não determinados de valores a, todos inteiros e positivos, um de cada vez, e calcule e escreva a média aritmética dos valores lidos, a quantidade de valores pares, a quantidade de valores impares, a percentagem de valores pares e a percentagem de valores ímpares.
+``` visualg
+Algoritmo "atividade-01"
+Var
+a, i, soma, par, impar : inteiro
+media, percPar, percImpar : real
+
+Inicio
+enquanto 0 <= a faca
+	escreva("a = ")
+	leia(a)
+	i <- i + 1
+	soma <- soma + a
+	se (a MOD 2 = 0) e (a <> 1) entao
+		par <- par + 1
+	senao
+		impar <- impar + 1
+	fimse
+fimenquanto
+
+media <- soma / i
+escreval("Média = ", media)
+percPar <- (100 * par) / i
+escreval("Pares = ", par, " | ", percPar, "%")
+percImpar <- (100 * impar) / i
+escreval("Impares = ", impar, " | ", percImpar, "%")
+Fimalgoritmo
+```
+
+
+## Aula 08
+**01.**
+``` visualg
+```
