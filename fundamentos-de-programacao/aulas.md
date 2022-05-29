@@ -87,3 +87,10 @@ int calc_idade(int nasc, int ano) {
 	idade = ano - nasc;
 return idade; }
 ```
+
+
+## Classes de armazenamento
+* Modificador `auto`: definido por padrão.
+* Modificador `register`: Tentativa de uso de uma determinda variável diretamente em registrador do CPU.
+* Modificador `extern`: Compartilhar uma variável entre arquivos.
+* Modificador `static`: Não elimina o conteudo de uma variável, preservando o conteúdo para a próxima chamada da função.

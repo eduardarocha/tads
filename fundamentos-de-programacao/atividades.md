@@ -446,3 +446,8 @@ int calc_minutos(int h1, int m1, int h2, int m2) {
     int minutos = ((h2 - h1) * 60) + (m2 - m1);
 return minutos; }
 ```
+
+
+## Aula 06 (27/05)
+**01.** 
+``` c
