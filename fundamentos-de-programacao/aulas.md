@@ -46,7 +46,6 @@ int main(void) {
 	return 0;
 }
 ```
-
 **Em arquivo teste.cpp, usando o tipo de variável char:**
 ``` c
 # include <stdio.h>
@@ -65,21 +64,18 @@ Declaração do protótipo de uma função ocorre, de forma simplificada, quando
 ``` c
 int int calc_idade(int nasc, int ano);
 ```
-
 Definição de uma função simples utilizando "**void**" como tipo de retorno e parâmetros: `hello();`.
 ``` c
 void hello(void) {
 	printf("Olá, mundo!");
 }
 ```
-
 Definição de uma função que utiliza "**void**" como tipo de retorno e um parâmetro do tipo "**char**": `hello("Olá, mundo!");`.
 ``` c
 void hello(char n[15]) {
 	printf("%s", &n);
 }
 ```
-
 Definição de uma função com retorno e parâmetros: `calc_idade(2004, 2022);`.
 ``` c
 int calc_idade(int nasc, int ano) {

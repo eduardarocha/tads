@@ -445,12 +445,14 @@ return minutos; }
 ``` c
 # include <stdio.h>
 int situacao(float p1, float p2, float *media);
+
 int main(void) {
 	float p1, p2, media;
 	printf("Nota 1: "); scanf("%f", &p1);
 	printf("Nota 2: "); scanf("%f", &p2);
 	printf("%d | ", situacao(p1, p2, &media)); printf("Media: %.2f", media);
 }
+
 int situacao(float p1, float p2, float *media) {
 	*media = (p1 + p2) / 2;
 	if (6 <= *media) return 1; else return 0;
@@ -464,7 +466,23 @@ return 0;}
 
 Imprima os dois valores, no formato: “(Valor maior) é maior que (valor menor)”.
 ``` c
+# include <stdio.h>
+int numeros(int *a, int *b);
 
+int main(void) {
+	int a, b;
+	printf("a = "); scanf("%d", &a);
+	printf("b = "); scanf("%d", &b);
+	int maior = numeros(&a, &b), menor;
+	if (maior > a) {menor = a;} else {menor = b;}
+	printf("%d maior que %d", maior, menor);
+return 0; }
+
+int numeros(int *a, int *b) {
+	if (*a % 5 == 0) {*a += 1;} else {*a -= 2;}
+	if (*b % 3 == 0) {*b += 7;}
+	if (*a > *b) {return *a;} else {return *b;}
+}
 ```
 
 **03.** Faça um programa para gerenciamento de conta-corrente. O programa deverá ler o saldo inicial da conta e após isso exibir um menu com as seguintes opções:
@@ -473,11 +491,35 @@ Imprima os dois valores, no formato: “(Valor maior) é maior que (valor menor)
 * 3 – Saque
 * 4 – Sair.
 
-Deverá ser implementado duas funções uma para depósito e outra para saque.
-Caso o valor a ser sacado for maior que o saldo, não executar a operação exibir uma mensagem:
-“Saldo insuficiente”. Utilizar variável global para controlar o saldo.
+Deverá ser implementado duas funções uma para depósito e outra para saque. Caso o valor a ser sacado for maior que o saldo, não executar a operação exibir uma mensagem: “Saldo insuficiente”. Utilizar variável global para controlar o saldo.
 ``` c
+# include <stdio.h>
+void deposito(); void saque();
+float saldo, valor;
 
+int main(void) {
+	printf("Saldo: R$ "); scanf("%f", &saldo);
+	int i;
+	do {
+		printf("\n(1) Mostrar saldo\n(2) Deposito\n(3) Saque\n(4) Sair\nEscolha: "); scanf("%d", &i);
+		switch (i) {
+		case 1: printf("\nSaldo: R$ %.2f\n", saldo); break;
+		case 2: deposito(); break;
+		case 3: saque(); break;
+		case 4: printf("\nSaindo..."); break;
+		}
+	} while (i != 4);
+return 0;}
+
+void deposito() {
+	printf("\nValor para deposito: R$ "); scanf("%f", &valor);
+	saldo += valor;
+}
+
+void saque() {
+	printf("\nValor para saque: R$ "); scanf("%f", &valor);
+	if (valor <= saldo) {saldo -= valor;} else {printf("\nSaldo insuficiente!\n");}
+}
 ```
 
 **04.** Faça um programa para controlar os dados de um estacionamento. O estacionamento cobra R$5,00 de taxa para estacionar até cinco horas, e cobra um adicional de R$1,00 por hora ou fração caso sejam excedidas as cinco horas. A taxa máxima para qualquer período determinado de 24 horas é R$ 20,00, supondo que nenhum carro fique estacionado por mais de 24 horas. O programa deverá ler a identificação do carro e quantidade de horas que cliente ficou estacionado até que o usuário digite 0 para a identificação do veículo. A cada leitura o programa deverá calcular e imprimir o valor a ser pago pelo cliente. O programa deverá acumular o total recebido pelo estacionamento e o final da execução mostrar o
