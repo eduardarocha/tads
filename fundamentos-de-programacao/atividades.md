@@ -358,14 +358,12 @@ return 0; }
 ``` c
 # include <stdio.h>
 void calc_idade(int nasc, int ano);
-
 int main(void) {
     int nasc, ano;
     printf("Ano de nascimento: "); scanf("%d", &nasc);
     printf("Ano atual: "); scanf("%d", &ano);
     calc_idade(nasc, ano);
 return 0; }
-
 void calc_idade(int nasc, int ano) {
     int idade = ano - nasc;
     if (idade < 18) {
@@ -382,7 +380,6 @@ void calc_idade(int nasc, int ano) {
 ``` c
 # include <stdio.h>
 void calc_imc(float altura, char genero);
-
 int main(void) {
     float altura, peso;
     int genero;
@@ -391,7 +388,6 @@ int main(void) {
     printf("Gênero: "); scanf("%d", &genero);
     calc_imc(altura, genero);
 return 0; }
-
 void calc_imc(float altura, char genero) {
     float imc;
     if (genero == 0) {
@@ -408,13 +404,11 @@ void calc_imc(float altura, char genero) {
 ``` c
 # include <stdio.h>
 float bolsa(float nota);
-
 int main(void) {
     float nota;
     printf("Nota: "); scanf("%f", &nota);
     printf("R$ %.2f\n", bolsa(nota));
 return 0; }
-
 float bolsa(float nota) {
     float valor;
     if (7 <= nota && nota < 8) {
@@ -434,14 +428,12 @@ return valor; }
 # include <stdio.h>
 # include <windows.h>
 int calc_minutos(int h1, int m1, int h2, int m2);
-
 int main(void) {
     int h1, m1, h2, m2;
     scanf("%d", &h1); system("cls"); printf("%d : ", h1); scanf("%d", &m1);
     scanf("%d", &h2); system("cls"); printf("%d : %d\n%d : ", h1, m1, h2); scanf("%d", &m2);
     printf("Tempo decorrido de %d minutos.", calc_minutos(h1, m1, h2, m2));
 return 0; }
-
 int calc_minutos(int h1, int m1, int h2, int m2) {
     int minutos = ((h2 - h1) * 60) + (m2 - m1);
 return minutos; }
@@ -449,5 +441,47 @@ return minutos; }
 
 
 ## Aula 06 (27/05)
-**01.** 
+**01.** Escreva uma função que determine a média e a situação de um aluno em uma disciplina. A função recebe como parâmetros as duas notas de um aluno (p1, p2) e o ponteiro para uma variável (media), conforme o seguinte protótipo: "int situacao(float p1, float p2, float *media);". Na variável indicada pelo ponteiro media, a função deve armazenar a média do aluno, calculada como a média aritmética das notas das provas. Além disso, a função deve retornar a situação do aluno (0 – reprovado ou 1 – aprovado) de acordo com a média (6.0) para aprovação. O programa principal devera ler as duas notas, invocar a função e informa a média e a situação do aluno.
 ``` c
+# include <stdio.h>
+int situacao(float p1, float p2, float *media);
+int main(void) {
+	float p1, p2, media;
+	printf("Nota 1: "); scanf("%f", &p1);
+	printf("Nota 2: "); scanf("%f", &p2);
+	printf("%d | ", situacao(p1, p2, &media)); printf("Media: %.2f", media);
+}
+int situacao(float p1, float p2, float *media) {
+	*media = (p1 + p2) / 2;
+	if (6 <= *media) return 1; else return 0;
+return 0;}
+```
+
+**02.** Escreva um programa que: Contenha uma função que receba dois valores inteiros por referência (as alterações devem sobreviver ao final da chamada da função) e faça o seguinte procedimento:
+* Se o primeiro valor for múltiplo de 5, divide por 5 e adicione 1. Se não, subtraia 2.
+* Se o segundo valor for múltiplo de 3, some 7 a ele. Se não, nada faça.
+* Retorne o maior dos valores.
+
+Imprima os dois valores, no formato: “(Valor maior) é maior que (valor menor)”.
+``` c
+
+```
+
+**03.** Faça um programa para gerenciamento de conta-corrente. O programa deverá ler o saldo inicial da conta e após isso exibir um menu com as seguintes opções:
+* 1 – Mostrar saldo
+* 2 – Depósito
+* 3 – Saque
+* 4 – Sair.
+
+Deverá ser implementado duas funções uma para depósito e outra para saque.
+Caso o valor a ser sacado for maior que o saldo, não executar a operação exibir uma mensagem:
+“Saldo insuficiente”. Utilizar variável global para controlar o saldo.
+``` c
+
+```
+
+**04.** Faça um programa para controlar os dados de um estacionamento. O estacionamento cobra R$5,00 de taxa para estacionar até cinco horas, e cobra um adicional de R$1,00 por hora ou fração caso sejam excedidas as cinco horas. A taxa máxima para qualquer período determinado de 24 horas é R$ 20,00, supondo que nenhum carro fique estacionado por mais de 24 horas. O programa deverá ler a identificação do carro e quantidade de horas que cliente ficou estacionado até que o usuário digite 0 para a identificação do veículo. A cada leitura o programa deverá calcular e imprimir o valor a ser pago pelo cliente. O programa deverá acumular o total recebido pelo estacionamento e o final da execução mostrar o
+total recebido. O programa deverá ter uma função para calcular o valor a ser pago pelo cliente, que receberá com parâmetro a quantidade de horas e retornar o valor a ser pago. Utilizar uma variável static para armazenar o total recebido.
+``` c
+
+```
