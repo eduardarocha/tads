@@ -425,8 +425,8 @@ return valor; }
 
 **04.** 
 ``` c
-# include <stdio.h>
-# include <windows.h>
+#include <stdio.h>
+#include <windows.h>
 int calc_minutos(int h1, int m1, int h2, int m2);
 int main(void) {
     int h1, m1, h2, m2;
@@ -443,7 +443,7 @@ return minutos; }
 ## Aula 06 (27/05)
 **01.** Escreva uma função que determine a média e a situação de um aluno em uma disciplina. A função recebe como parâmetros as duas notas de um aluno (p1, p2) e o ponteiro para uma variável (media), conforme o seguinte protótipo: "int situacao(float p1, float p2, float *media);". Na variável indicada pelo ponteiro media, a função deve armazenar a média do aluno, calculada como a média aritmética das notas das provas. Além disso, a função deve retornar a situação do aluno (0 – reprovado ou 1 – aprovado) de acordo com a média (6.0) para aprovação. O programa principal devera ler as duas notas, invocar a função e informa a média e a situação do aluno.
 ``` c
-# include <stdio.h>
+#include <stdio.h>
 int situacao(float p1, float p2, float *media);
 
 int main(void) {
@@ -466,7 +466,7 @@ return 0;}
 
 Imprima os dois valores, no formato: “(Valor maior) é maior que (valor menor)”.
 ``` c
-# include <stdio.h>
+#include <stdio.h>
 int numeros(int *a, int *b);
 
 int main(void) {
@@ -493,7 +493,7 @@ int numeros(int *a, int *b) {
 
 Deverá ser implementado duas funções uma para depósito e outra para saque. Caso o valor a ser sacado for maior que o saldo, não executar a operação exibir uma mensagem: “Saldo insuficiente”. Utilizar variável global para controlar o saldo.
 ``` c
-# include <stdio.h>
+#include <stdio.h>
 void deposito(); void saque();
 float saldo, valor;
 
@@ -522,8 +522,7 @@ void saque() {
 }
 ```
 
-**04.** Faça um programa para controlar os dados de um estacionamento. O estacionamento cobra R$5,00 de taxa para estacionar até cinco horas, e cobra um adicional de R$1,00 por hora ou fração caso sejam excedidas as cinco horas. A taxa máxima para qualquer período determinado de 24 horas é R$ 20,00, supondo que nenhum carro fique estacionado por mais de 24 horas. O programa deverá ler a identificação do carro e quantidade de horas que cliente ficou estacionado até que o usuário digite 0 para a identificação do veículo. A cada leitura o programa deverá calcular e imprimir o valor a ser pago pelo cliente. O programa deverá acumular o total recebido pelo estacionamento e o final da execução mostrar o
-total recebido. O programa deverá ter uma função para calcular o valor a ser pago pelo cliente, que receberá com parâmetro a quantidade de horas e retornar o valor a ser pago. Utilizar uma variável static para armazenar o total recebido.
+**04.** Faça um programa para controlar os dados de um estacionamento. O estacionamento cobra R$5,00 de taxa para estacionar até cinco horas, e cobra um adicional de R$1,00 por hora ou fração caso sejam excedidas as cinco horas. A taxa máxima para qualquer período determinado de 24 horas é R$ 20,00, supondo que nenhum carro fique estacionado por mais de 24 horas. O programa deverá ler a identificação do carro e quantidade de horas que cliente ficou estacionado até que o usuário digite 0 para a identificação do veículo. A cada leitura o programa deverá calcular e imprimir o valor a ser pago pelo cliente. O programa deverá acumular o total recebido pelo estacionamento e o final da execução mostrar o total recebido. O programa deverá ter uma função para calcular o valor a ser pago pelo cliente, que receberá com parâmetro a quantidade de horas e retornar o valor a ser pago. Utilizar uma variável static para armazenar o total recebido.
 ``` c
 
 ```
