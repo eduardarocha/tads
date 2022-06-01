@@ -1,14 +1,17 @@
-#include <stdio.h>
-#include <windows.h>
-
+# include <stdio.h>
 int main(void) {
-    int id, h, min;
-    do {
-        printf("ID: "); scanf("%d", &id);
-        if (id != 0) {
-            printf("Tempo estacionado: "); scanf("%d", &h); system("cls");
-            printf("ID: %d\nTempo estacionado: %dh", id, h); scanf("%d", &min);
+    int idade = 1, pessoas = 0, soma = 0, menor, maior;
+    float media;
+    printf("Idade: "); scanf("%d", &idade);
+    maior = idade; menor = idade;
+    while (idade != 0) {
+        printf("Idade: "); scanf("%d", &idade);
+        if (idade != 0) {
+            soma += idade; pessoas += 1;
+            if (maior < idade) {maior = idade;}
+            if (idade < menor) {menor = idade;}
         }
-    } while (id != 0);
+    }
+    media = soma / pessoas;
+    printf("\nTotal: %d\nMedia: %.2f\nMaior: %d\nMenor: %d", pessoas, media, maior, menor);
 }
-

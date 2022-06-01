@@ -85,8 +85,24 @@ return idade; }
 ```
 
 
+## Ponteiro
+### Passagem por valor
+Copiar o conteúdo da variável x para a: a = x.
+
+`fun(x); [...] int fun(int a) {...}`
+
+### Passagem por referêcia
+Copia o endereço de memória de variável x para a variável ponteiro a: a = &x.
+
+`fun(&x) [...] int fun(int *a) {...}`
+
+
 ## Classes de armazenamento
 * Modificador `auto`: definido por padrão.
 * Modificador `register`: Tentativa de uso de uma determinda variável diretamente em registrador do CPU.
 * Modificador `extern`: Compartilhar uma variável entre arquivos.
 * Modificador `static`: Não elimina o conteudo de uma variável, preservando o conteúdo para a próxima chamada da função.
+* Modificator `const`: Bloqueia o valor de uma variável.
+
+
+## Vetor

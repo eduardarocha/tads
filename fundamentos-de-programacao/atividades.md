@@ -1,3 +1,4 @@
+# C
 ## Aula 01
 **01.** Faça um programa que leia o ano atual e o ano de nascimento de uma pessoa, calcule e mostre a sua idade.
 ``` c
@@ -90,14 +91,10 @@ int main(void) {
 
 ## Aula 03 (04/04)
 **01.** Implemente um programa que recebe a nota de um aluno e retorna o valor da sua bolsa-auxílio conforme a tabela abaixo:
-
-7 ≤ nota < 80 : R$ 500,00
-
-8 ≤ nota < 90 : R$ 700,00
-
-nota ≥ 9 : R$ 900,00
-
-nota < 7 : R$ 0,00 (sem bolsa)
+* 7 ≤ nota < 80 : R$ 500,00
+* 8 ≤ nota < 90 : R$ 700,00
+* nota ≥ 9 : R$ 900,00
+* nota < 7 : R$ 0,00 (sem bolsa)
 ``` c
 # include <stdio.h>
 int main(void) {
@@ -160,71 +157,7 @@ int main(void) {
 
 **03.** Um ciclone tropical consiste em uma tempestade muito violenta que, sob determinadas condições, adquire um movimento de rotação em torno de uma região de baixa pressão atmosférica. Um ciclone pode atingir um diâmetro de até 500 km. Furacões são os mais violentos desses ciclones e chegam a produzir ventos de até 320 km/h. Na tabela abaixo, são apresentados alguns dados relativos à classificação dos furacões segundo a escala Saffir-Simpson:
 * tempestade tropical 62 a 118 km/h
-* furacão de categoria 1 119 a 153 km/h# include <stdio.h>
-int main(void) {
-    float n1, n2, media;
-    char conceito[1];# include <stdio.h>
-int main(void) {
-    float n1, n2, media;
-    char conceito[1];
-    printf("Nota 1: "); scanf("%f", &n1);
-    printf("Nota 2: "); scanf("%f", &n2);
-    media = (n1 + n2) / 2;
-
-    if (media >= 0 and media < 4) {
-        conceito[1] = 'E';
-        printf("\nReprovado(a)");
-    } else {
-        if (media >= 4 and media < 6) {
-            conceito[1] = 'D';
-            printf("\nReprovado(a)");
-        } else {
-            if (media >= 6 and media < 7.5) {
-                conceito[1] = 'C';
-                printf("\nAprovado(a)");
-            } else {
-                if (media >= 7.5 and media < 9) {
-                    conceito[1] = 'B';
-                    printf("\nAprovado(a)");
-                } else {
-                    conceito[1] = 'A';
-                    printf("\nAprovado(a)");
-                }
-            }
-        }
-    }
-    printf("\nConceito: %c\nMedia: %.2f", conceito[1], media);
-    return 0;
-}
-    printf("Nota 1: "); scanf("%f", &n1);
-    printf("Nota 2: "); scanf("%f", &n2);
-    media = (n1 + n2) / 2;
-
-    if (media >= 0 and media < 4) {
-        conceito[1] = 'E';
-        printf("\nReprovado(a)");
-    } else {
-        if (media >= 4 and media < 6) {
-            conceito[1] = 'D';
-            printf("\nReprovado(a)");
-        } else {
-            if (media >= 6 and media < 7.5) {
-                conceito[1] = 'C';
-                printf("\nAprovado(a)");
-            } else {
-                if (media >= 7.5 and media < 9) {
-                    conceito[1] = 'B';
-                    printf("\nAprovado(a)");
-                } else {
-                    conceito[1] = 'A';
-                    printf("\nAprovado(a)");
-                }
-            }
-        }
-    }
-    printf("\nConceito: %c\nMedia: %.2f", conceito[1], media);
-    return 0;
-}
+* furacão de categoria 1 119 a 153 km/h
 * furacão de categoria 2 154 a 177 km/h
 * furacão de categoria 3 178 a 209 km/h
 * furacão de categoria 4 210 a 249 km/h
@@ -256,7 +189,6 @@ int main(void) {
             }
         }
     }
-    return 0;
 }
 ```
 
@@ -305,7 +237,7 @@ return 0; }
 
 
 ## Aula 04 (29/04)
-**01.** 
+**01.** Fala um programa que lê um número inteiro e acumule os valores digitados até que o número digitado seja menor que zero. Ao sair do ciclo de repetição mostrar os valores que foram acumulados.
 ``` c
 # include <stdio.h>
 int main(void) {
@@ -321,7 +253,7 @@ int main(void) {
 return 0; }
 ```
 
-**02.** 
+**02.** Faça um programa que implemente um menu onde o usuário deverá ler opções através de uma variável inteira admitindo valores entre 1 e 5. Caso seja entrado um número diferente, o programa deverá solicitar que o usuário digite novamente o valor. 1 – Cadastrar, 2 – Consultar, 3 – Alterar, 4 – Excluir, 5 – Sair. Ao escolher uma das opções que não seja a sair, mostrar uma mensagem indicando a opção selecionada. Exemplo: “Você escolher a opção Cadastrar”.
 ``` c
 # include <stdio.h>
 int main(void) {
@@ -350,11 +282,26 @@ int main(void) {
         }
     } while (i == true);
 return 0; }
-``
+```
+
+**03.** Faça um programa que, para um número indeterminado de pessoas: leia a idade de cada uma, sendo que a idade 0 (zero) indica o fim da leitura e não deve ser considerada. A seguir calcular e mostrar:
+* o número de pessoas;
+* a idade média do grupo;
+* a menor idade e a maior idade.
+``` c
+
+```
+
+**04.** Faça um programa que receba dois números X e Y, sendo X < Y. Calcule e mostre:
+* a soma dos números pares desse intervalo de números, incluindo os números digitados;
+* a multiplicação dos números ímpares desse intervalo, incluindo os digitados.
+``` c
+
+```
 
 
 ## Aula 05 (20/05)
-**01.** 
+**01.** Implemente uma função que recebe com parâmetro o ano de nascimento de uma pessoa e o ano atual, e imprime na tela se a pessoa é criança, adulto ou idoso. Sendo criança uma pessoa que tenho até 17 anos. A partir de 18 é considerada adulta e a partir de 65 anos é idosa.
 ``` c
 # include <stdio.h>
 void calc_idade(int nasc, int ano);
@@ -376,7 +323,9 @@ void calc_idade(int nasc, int ano) {
 }
 ```
 
-**02.** 
+**02.**  Faça um programa que receba do usuário a sua altura, peso atual e gênero (0 masculino e 1 feminino), e imprima na tela se o usuário está acima ou abaixo de seu peso ideal. Para fazer essa verificação crie uma função que recebe como parâmetros a altura e o gênero de uma pessoa (0 masculino e 1 feminino) e retorna o seu peso ideal, utilizando as seguintes fórmulas:
+* Para gênero masculino: (72.7 * altura) – 58
+* Para gênero feminino: (62.1 * altura) – 44.7
 ``` c
 # include <stdio.h>
 void calc_imc(float altura, char genero);
@@ -400,7 +349,11 @@ void calc_imc(float altura, char genero) {
 }
 ```
 
-**03.** 
+**03.** Implemente uma função que recebe a nota de um aluno e retorna o valor da sua bolsa-auxílio conforme a tabela abaixo:
+* 7 ≤ nota < 80 [R$ 500,00]
+* 8 ≤ nota < 90 [R$ 700,00]
+* nota ≥ 9 [R$ 900,00]
+* nota < 7 [R$ 0,00] (sem bolsa)
 ``` c
 # include <stdio.h>
 float bolsa(float nota);
@@ -408,7 +361,7 @@ int main(void) {
     float nota;
     printf("Nota: "); scanf("%f", &nota);
     printf("R$ %.2f\n", bolsa(nota));
-return 0; }
+}
 float bolsa(float nota) {
     float valor;
     if (7 <= nota && nota < 8) {
@@ -423,7 +376,7 @@ float bolsa(float nota) {
 return valor; }
 ```
 
-**04.** 
+**04.** Implemente uma função que retorna o período em minutos decorrido entre os dois horários. A função deve receber 4 parâmetros inteiros, cada par de inteiros representando dois horários (horas e minutos, inicial e final).
 ``` c
 #include <stdio.h>
 #include <windows.h>
@@ -433,7 +386,7 @@ int main(void) {
     scanf("%d", &h1); system("cls"); printf("%d : ", h1); scanf("%d", &m1);
     scanf("%d", &h2); system("cls"); printf("%d : %d\n%d : ", h1, m1, h2); scanf("%d", &m2);
     printf("Tempo decorrido de %d minutos.", calc_minutos(h1, m1, h2, m2));
-return 0; }
+}
 int calc_minutos(int h1, int m1, int h2, int m2) {
     int minutos = ((h2 - h1) * 60) + (m2 - m1);
 return minutos; }
@@ -455,8 +408,8 @@ int main(void) {
 
 int situacao(float p1, float p2, float *media) {
 	*media = (p1 + p2) / 2;
-	if (6 <= *media) return 1; else return 0;
-return 0;}
+	if (6 <= *media) {return 1;}
+}
 ```
 
 **02.** Escreva um programa que: Contenha uma função que receba dois valores inteiros por referência (as alterações devem sobreviver ao final da chamada da função) e faça o seguinte procedimento:
@@ -476,7 +429,7 @@ int main(void) {
 	int maior = numeros(&a, &b), menor;
 	if (maior > a) {menor = a;} else {menor = b;}
 	printf("%d maior que %d", maior, menor);
-return 0; }
+}
 
 int numeros(int *a, int *b) {
 	if (*a % 5 == 0) {*a += 1;} else {*a -= 2;}
@@ -509,7 +462,7 @@ int main(void) {
 		case 4: printf("\nSaindo..."); break;
 		}
 	} while (i != 4);
-return 0;}
+}
 
 void deposito() {
 	printf("\nValor para deposito: R$ "); scanf("%f", &valor);
@@ -524,5 +477,31 @@ void saque() {
 
 **04.** Faça um programa para controlar os dados de um estacionamento. O estacionamento cobra R$5,00 de taxa para estacionar até cinco horas, e cobra um adicional de R$1,00 por hora ou fração caso sejam excedidas as cinco horas. A taxa máxima para qualquer período determinado de 24 horas é R$ 20,00, supondo que nenhum carro fique estacionado por mais de 24 horas. O programa deverá ler a identificação do carro e quantidade de horas que cliente ficou estacionado até que o usuário digite 0 para a identificação do veículo. A cada leitura o programa deverá calcular e imprimir o valor a ser pago pelo cliente. O programa deverá acumular o total recebido pelo estacionamento e o final da execução mostrar o total recebido. O programa deverá ter uma função para calcular o valor a ser pago pelo cliente, que receberá com parâmetro a quantidade de horas e retornar o valor a ser pago. Utilizar uma variável static para armazenar o total recebido.
 ``` c
+# include <stdio.h>
+# include <stdlib.h> // Biblioteca Linux, permite o "system("clear");"
+float pagar(int *h, int *min);
 
+int main(void) {
+    int id, h, min;
+    static float total;
+    do {
+        printf("ID: "); scanf("%d", &id);
+        if (id != 0) {
+            printf("Tempo estacionado: "); scanf("%d", &h); system("clear");
+            printf("ID: %d\nTempo estacionado: %dh", id, h); scanf("%d", &min);
+            printf("Valor: R$ %.2f\n\n", pagar(&h, &min));
+            total += pagar(&h, &min);
+        }
+    } while (id != 0);
+    printf("Total: R$ %.2f\n", total);
+}
+
+float pagar(int *h, int *min) {
+    float valor = 5;
+    if (5 < *h) {
+        valor += *h - 5;
+        if (0 < *min) {valor += 1;}
+    }
+    return valor;
+}
 ```
