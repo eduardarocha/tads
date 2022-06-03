@@ -289,14 +289,43 @@ return 0; }
 * a idade média do grupo;
 * a menor idade e a maior idade.
 ``` c
-
+# include <stdio.h>
+int main(void) {
+    int idade, pessoas = 0, soma = 0, menor, maior; float media;
+    printf("Idade: "); scanf("%d", &idade);
+    maior = idade; menor = idade;
+    soma += idade; pessoas++;
+    while (idade != 0) {
+        printf("Idade: "); scanf("%d", &idade);
+        if (idade != 0) {
+            soma += idade; pessoas++;
+            if (maior < idade) {maior = idade;}
+            if (idade < menor) {menor = idade;}
+        }
+    }
+    media = soma / pessoas;
+    printf("\nTotal: %d\nMedia: %.2f\nMaior: %d\nMenor: %d", pessoas, media, maior, menor);
+}
 ```
 
 **04.** Faça um programa que receba dois números X e Y, sendo X < Y. Calcule e mostre:
 * a soma dos números pares desse intervalo de números, incluindo os números digitados;
 * a multiplicação dos números ímpares desse intervalo, incluindo os digitados.
 ``` c
-
+# include <stdio.h>
+int main(void) {
+    int x, y, soma = 0, mult = 1;
+    printf("X = "); scanf("%d", &x);
+    printf("Y = "); scanf("%d", &y);
+    if (x < y) {
+        for (int i = x; i <= y; i++) {
+            if (i % 2 == 0 && i != 1) {soma += i;} else {mult *= i;}
+        }
+        printf("[pares] Soma: %d\n[impares] Multiplicacao: %d", soma, mult);
+    } else {
+        printf("\nX deve ser menor que Y.");
+    }
+}
 ```
 
 
