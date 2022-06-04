@@ -534,3 +534,19 @@ float pagar(int *h, int *min) {
     return valor;
 }
 ```
+
+
+## Aula 07 (03/06)
+**01.** Faça a tabuada do 1 até o 10.
+``` c
+# include <stdio.h>
+int main(void) {
+    int total;
+    for (int i = 1; i <= 10; i++) {
+        printf("\nTabuada do %d\n", i);
+        for (int j = 1; j <= 10; j++) {
+            printf("%d x %d = %d\n", i, j, total = i * j);
+        }
+    }
+}
+```
