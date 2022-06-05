@@ -106,3 +106,24 @@ Copia o endereço de memória de variável x para a variável ponteiro a: a = &x
 
 
 ## Vetor
+### Declaração
+`int var[n];`
+* n : Número de posições.
+
+### Atribuição
+`var[i] = v;`
+* i : Posição na memória.
+* v : Valor.
+
+
+## Matriz
+### Declaração
+`int var[n][m];`
+* n : Número de posições de linhas.
+* m : Número de posições de colunas.
+
+### Atribuição
+`var[i][j] = v;`
+* i : Posição da linha na memória.
+* j : Posição da coluna na memória.
+* v : Valor.

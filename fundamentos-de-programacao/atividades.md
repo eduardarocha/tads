@@ -550,3 +550,22 @@ int main(void) {
     }
 }
 ```
+
+**02.** Faça uma matriz 3x3 e receba o valor de cada posição a partir de leitura do usuário, ao final, mostrando na tela a sua diagonal princiapal e sucundária.
+``` c
+# include <stdio.h>
+int main(void) {
+    int m[3][3], dp[3], ds[3], a = 0, b = 0;
+    for (int i = 0; i <= 2; i++) {
+        for (int j = 0; j <= 2; j++) {
+            printf("(%d, %d): ", i, j); scanf("%d", &m[i][j]);
+            if (i == j) {dp[a] = m[i][j]; a++;}
+            if (i + j == 2) {ds[b] = m[i][j]; b++;}
+        }
+    }
+    printf("\nDiagonal principal: ");
+    for (int i = 0; i < a; i++) {printf("%d ", dp[i]);}
+    printf("\nDiagonal secundaria: ");
+    for (int i = 0; i < b; i++) {printf("%d ", ds[i]);}
+}
+```
