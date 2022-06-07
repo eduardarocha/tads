@@ -273,33 +273,59 @@ Fimalgoritmo
 * maior salário;
 * percentual de pessoas com salário até R$1200,00.
 ``` visualg
-Algoritmo "atividade-01"
+Algoritmo "atividade-02"
 Var
-s, mediaS, mediaF, maior, perc : real
-f : inteiro
-Inicio
 
-enquanto salario < 0 faca
-	escreva("Salário: R$ ")
-	leia(s)
-	escreva("Filhos: ")
-	leia(f)
-	
-fimenquanto
+
+Inicio
 
 Fimalgoritmo
 ```
 
+**02.** Em uma eleição presidencial existem quatro candidatos. Os votos são informados através de  códigos. Os dados utilizados para a contagem dos  votos obedecem à seguinte codificação:
+* 1,2,3,4 = voto para os respectivos candidatos
+* 5 = voto nulo
+* 6 = voto em branco
 
-2) Em uma eleição presidencial existem quatro candidatos. Os votos são informados através de  códigos. Os dados utilizados para a contagem dos  votos obedecem à seguinte codificação:
-1,2,3,4 = voto para os respectivos candidatos;
-5 = voto nulo;
-6 = voto em branco;
-Elabore um algoritmo que leia o código do candidato em um voto. Calcule e escreva:
-- total de votos para cada candidato;
-- total de votos nulos;
-- total de votos em branco;
-Como finalizador do conjunto de votos, tem-se o valor 0
+Elabore um algoritmo que leia o código do candidato em um voto, como finalizador do conjunto de votos, tem-se o valor 0. Calcule e escreva:
+* total de votos para cada candidato;
+* total de votos nulos;
+* total de votos em branco;
+``` visualg
+Algoritmo "atividade-02"
+Var
+voto, q1, q2, q3, q4, q5, q6 : inteiro
 
+Inicio
+voto <- 1
+enquanto (voto <> 0) faca
+	escreva("Voto: ")
+	leia(voto)
+	escolha (voto)
+	caso 1
+		q1 <- q1 + 1
+	caso 2
+		q2 <- q2 + 1
+	caso 3
+		q3 <- q3 + 1
+	caso 4
+		q4 <- q4 + 1
+	caso 5
+		q5 <- q5 + 1
+	caso 6
+		q6 <- q6 + 1
+	fimescolha
+fimenquanto
+escreval("1 : ", q1)
+escreval("2 : ", q2)
+escreval("3 : ", q3)
+escreval("4 : ", q4)
+escreval("Nulo : ", q5)
+escreval("Branco : ", q6)
+Fimalgoritmo
+```
 
-3)Uma empresa deseja aumentar seus preços em 20%. Faça um algoritmo que leia o código e o preço de custo de cada produto e calcule o preço novo. Calcule também, a média dos preços com e sem aumento. Mostre o código e o preço novo de cada produto e, no final, as médias. A entrada de dados deve terminar quando for lido um código de produto negativo.
+**03.** Uma empresa deseja aumentar seus preços em 20%. Faça um algoritmo que leia o código e o preço de custo de cada produto e calcule o preço novo. Calcule também, a média dos preços com e sem aumento. Mostre o código e o preço novo de cada produto e, no final, as médias. A entrada de dados deve terminar quando for lido um código de produto negativo.
+``` visualg
+
+```
