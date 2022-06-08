@@ -201,8 +201,8 @@ Fimalgoritmo
 Algoritmo "atividade-02"
 Var
 m, i, divisores, fatorial, soma : inteiro
-Inicio
 
+Inicio
 enquanto 0 < m faca
 	escreva("m = ")
 	leia(m)
@@ -231,7 +231,6 @@ enquanto 0 < m faca
 		fimse
 	fimse
 fimenquanto
-
 Fimalgoritmo
 ```
 
@@ -240,8 +239,8 @@ Fimalgoritmo
 Algoritmo "atividade-03"
 Var
 a, i, soma, par, impar, media, percPar, percImpar : inteiro
-Inicio
 
+Inicio
 enquanto 0 <= a faca
 	escreva("a = ")
 	leia(a)
@@ -255,30 +254,63 @@ enquanto 0 <= a faca
 		fimse
 	fimse
 fimenquanto
+
 media <- soma DIV i
 escreval("Média = ", media)
 percPar <- (100 * par) DIV i
 escreval("Pares = ", par, " | ", percPar, "%")
 percImpar <- (100 * impar) DIV i
 escreval("Impares = ", impar, " | ", percImpar, "%")
-
 Fimalgoritmo
 ```
 
 
 ## Aula 08
 **01.** A prefeitura de uma cidade fez uma pesquisa entre seus habitantes, coletando dados sobre o salário e número de filhos. O final da leitura de dados se dará com a entrada de um salário negativo. A prefeitura deseja saber:  
-* média do salário da população;
-* média do número de filhos;
-* maior salário;
-* percentual de pessoas com salário até R$1200,00.
+* média do salário da população
+* média do número de filhos
+* maior salário
+* percentual de pessoas com salário até R$1200,00
 ``` visualg
 Algoritmo "atividade-02"
 Var
-
+salario, somaS, mediaS, mediaF, maiorS, percS : real
+filhos, somaF, quant, quantS : inteiro
 
 Inicio
+escreva("Salario: ")
+leia(salario)
+escreva("Filhos: ")
+leia(filhos)
+quant <- 1
+somaS <- salario
+somaF <- filhos
+maiorS <- salario
+enquanto (0 <= salario) faca
+	escreva("Salario: ")
+	leia(salario)
+	se (0 <= salario) entao
+		escreva("Filhos: ")
+		leia(filhos)
+		quant <- quant + 1
+		somaS <- somaS + salario
+		somaF <- somaF + filhos
+		se (maiorS < salario) entao
+			maiorS <- salario
+		fimse
+		se (salario <= 1200) entao
+			quantS <- quantS + 1
+		fimse
+	fimse
+fimenquanto
 
+mediaS <- somaS / quant
+escreval("Media de salario: R$ ", mediaS)
+mediaF <- somaF / quant
+escreval("Media de filhos: ", mediaF)
+escreval("Maior salario: R$ ", maiorS)
+percS <- (quantS * 100) / quant
+escreval("Percentual de salarios ate R$ 1200,00: ", percS)
 Fimalgoritmo
 ```
 
