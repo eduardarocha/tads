@@ -33,13 +33,308 @@ inclua biblioteca Matematica --> mat
 
 
 ## Aula 02
-**01.** 
+**01.** Faça um algoritmo que leia os valores A, B, C e imprima na tela se a soma de A + B é menor que C.
 ``` portugol
+programa {
+inclua biblioteca Matematica --> mat
+	funcao inicio() {
+		inteiro a, b, c
+		escreva("a = ") leia(a)
+		escreva("b = ") leia(b)
+		escreva("c = ") leia(c)
+		
+		se (c < a + b) {
+			escreva("Soma de A + B maior que C")
+		} senao {
+			escreva("Soma de A + B menor ou igual a C")
+		}
+	}
+}
+```
 
+**02.** Faça um algoritmo que leia o nome, o sexo e o estado civil de uma pessoa. Caso sexo seja “F” e estado civil seja “CASADA”, solicitar o tempo de casada (anos).
+``` portugol
+programa {
+inclua biblioteca Matematica --> mat
+	funcao inicio() {
+		cadeia nome, sexo, estadoCivil, tempoCasamento
+		escreva("Nome: ") leia(nome)
+		escreva("Sexo: ") leia(sexo)
+		escreva("Estado Civil: ") leia(estadoCivil)
+
+		se ((sexo == "f") e (estadoCivil == "casada")) {
+			escreva("Tempo de casada (anos): ") leia(tempoCasamento)
+		}
+	}
+}
+```
+
+**03.** Faça um algoritmo para receber um número qualquer e informar na tela se é par ou ímpar.
+``` portugol
+programa {
+inclua biblioteca Matematica --> mat
+	funcao inicio() {
+		inteiro n
+		escreva("n = ") leia(n)
+		
+		se (n % 2 == 0) {
+			escreva("n é par")
+		} senao {
+			escreva("n é impar")
+		}
+	}
+}
+```
+
+**04.** Faça um algoritmo que leia dois valores inteiros A e B se os valores forem iguais deverá se somar os dois, caso contrário multiplique A por B. Ao final de qualquer um dos cálculos deve-se atribuir o resultado para uma variável C e mostrar seu conteúdo na tela.
+``` portugol
+programa {
+inclua biblioteca Matematica --> mat
+	funcao inicio() {
+		inteiro a, b, c
+		escreva("a = ") leia(a)
+		escreva("b = ") leia(b)
+
+		se (a == b) {
+			c = a + b
+			escreva("A = B: Soma de A + B = ", c)
+		} senao {
+			c = a * b
+			escreva("A != B: Soma de A * B = ", c)
+		}
+	}
+}
+```
+
+**05.** Encontrar o dobro de um número caso ele seja positivo e o seu triplo caso seja negativo, imprimindo o resultado.
+``` portugol
+programa {
+inclua biblioteca Matematica --> mat
+	funcao inicio() {
+		inteiro n, total
+		escreva("n = ") leia(n)
+		
+		se (n >= 0) {
+			total = n * 2
+			escreva("n é positivo, seu dobro é: ", total)
+		} senao {
+			total = n * 3
+			escreva("n é positivo, seu triplo é: ", total)
+		}
+	}
+}
+```
+
+**06.** Escreva um algoritmo que lê dois valores booleanos (lógicos) e então determina se ambos são VERDADEIROS ou FALSOS.
+``` portugol
+programa {
+inclua biblioteca Matematica --> mat
+	funcao inicio() {
+		logico a, b
+		escreva("1º valor = verdadeiro ou falso:\n") leia(a)
+		escreva("2º valor = verdadeiro ou falso:\n") leia(b)
+		
+		se ((a == verdadeiro) e (b == verdadeiro)) {
+			escreva("Os dois valores são verdadeiros.")
+		} senao {
+			escreva("Um dos valores é falso.")
+		}
+	}
+}
+```
+
+**07.** Faça um algoritmo que leia uma variável e some 5 caso seja par ou some 8 caso seja ímpar, imprimir o resultado desta operação.
+``` portugol
+programa {
+inclua biblioteca Matematica --> mat
+	funcao inicio() {
+		inteiro n, total
+		escreva("n = ") leia(n)
+		
+		se (n % 2 == 0) {
+			total = n + 5
+			escreva("n é par, total = ", total)
+		} senao {
+			total = n + 8
+			escreva("n é impar, total = ", total)
+		}
+	}
+}
+```
+
+**08.** Escreva um algoritmo que leia três valores inteiros e diferentes e mostre-os em ordem decrescente.
+``` portugol
+programa {
+inclua biblioteca Matematica --> mat
+	funcao inicio() {
+		inteiro a, b, c
+		escreva("a = ") leia(a)
+		escreva("b = ") leia(b)
+		escreva("c = ") leia(c)
+
+		se ((c > b) e (b > a)) {
+			escreva("\nCaso c > b > a\n", c, " > ", b, " > ", a)
+		} senao se ((b > c) e (c > a)) {
+			escreva("\nCaso b > c > a\n", b, " > ", c, " > ", a)
+		} senao se ((c > a) e (a > b)) {
+			escreva("\nCaso c > a > b\n", c, " > ", a, " > ", b)
+		} senao se ((b > a) e (a > c)) {
+			escreva("\nCaso b > a > c\n", b, " > ", a, " > ", c)
+		} senao se ((a > c) e (c > b)) {
+			escreva("\nCaso a > c > b\n", a, " > ", c, " > ", b)
+		} senao {
+			escreva("\nCaso a > b > c\n", a, " > ", b, " > ", c)
+		}
+	}
+}
+```
+
+**09.**	endo como dados de entrada a altura e o sexo de uma pessoa, construa um algoritmo que calcule seu peso ideal, utilizando as seguintes fórmulas:
+* para homens: (72.7 * h) – 58;
+* para mulheres: (62.1 * h) – 44.7.
+``` portugol
+programa {
+inclua biblioteca Matematica --> mat
+	funcao inicio() {
+		cadeia sexo = ""
+		real altura, pesoIdeal
+		escreva("Sexo: ") leia(sexo)
+		escreva("Altura: ") leia(altura)
+
+		se (sexo == "m") {
+			pesoIdeal = (72.7 * altura) - 58
+			escreva("Peso ideal: ", mat.arredondar(pesoIdeal, 2), " Kg")
+		} senao {
+			pesoIdeal = (62.1 * altura) - 44.7
+			escreva("Peso ideal: ", mat.arredondar(pesoIdeal, 2), " Kg")
+		}
+	}
+}
+```
+
+**10.**	O IMC – Indice de Massa Corporal é um critério da Organização Mundial de Saúde para dar umaindicação sobre a condição de peso de uma pessoa adulta. A fórmula é IMC = peso / ( altura )2 Elabore um algoritmo que leia o peso e a altura de um adulto e mostre sua condição de acordo com a tabela abaixo.
+* Abaixo de 18,5 Abaixo do peso
+* Entre 18,5 e 25 Peso normal
+* Entre 25 e 30 Acima do peso
+* Acima de 30 obeso
+``` portugol
+programa {
+inclua biblioteca Matematica --> mat
+	funcao inicio() {
+		real peso, altura, imc
+		escreva("Peso: ") leia(peso)
+		escreva("Altura: ") leia(altura)
+		imc = peso / (altura * altura)
+		
+		se ((imc > 0) e (imc <= 18.5)) {
+			escreva("Abaixo do peso.")
+		} senao se ((imc > 18.5) e (imc <= 25)) {
+			escreva("Peso normal.")
+		} senao se ((imc > 25) e (imc <= 30)) {
+			escreva("Acima do peso.")
+		} senao se (imc > 30) {
+			escreva("Acima do peso.")
+		}
+	}
+}
+```
+		
+**11.** Elabore um algoritmo que calcule o que deve ser pago por um produto, considerando o preço normal deetiqueta e a escolha da condição de pagamento. Utilize os códigos da tabela a seguir para ler qual acondição de pagamento escolhida e efetuar o cálculo adequado.
+* 1 À vista em dinheiro ou cheque, recebe 10% de desconto
+* 2 À vista no cartão de crédito, recebe 15% de desconto
+* 3 Em duas vezes, preço normal de etiqueta sem juros
+* 4 Em duas vezes, preço normal de etiqueta mais juros de 10%
+``` portugol
+programa {
+inclua biblioteca Matematica --> mat
+	funcao inicio() {
+		real preco
+		cadeia pagamento = ""
+		inteiro vezes
+		escreva("Preço: ") leia(preco)
+		escreva("Forma de pagamento: ") leia(pagamento)
+		escreva("Em vezes de: x") leia(vezes)
+		
+		se ((pagamento == "dinheiro") ou (pagamento == "cheque")) {
+			escolha (vezes) {
+				caso 1:
+				preco -= preco * 0.1
+				escreva("10% de desconto. Total: R$ ", preco)
+				pare
+				caso 2:
+				escreva("\nPreço normal, sem juros. Total: R$ ", preco)
+				pare
+				caso 3:
+				preco += preco * (0.1 * vezes)
+				escreva("\nPreço normal, mais juros de 10%. Total: R$ ", preco)
+				pare
+			}
+		} senao se (pagamento == "credito") {
+			escolha (vezes) {
+				caso 1:
+				preco -= preco * 0.15
+				escreva("15% de desconto. Total: R$ ", preco)
+				pare
+				caso 2:
+				escreva("\nPreço normal, sem juros. Total: R$ ", preco)
+				pare
+				caso 3:
+				preco += preco * (0.1 * vezes)
+				escreva("\nPreço normal, mais juros de 10%. Total: R$ ", preco)
+				pare
+			}
+		}
+	}
+}
+```
+
+**12.** Escreva um algoritmo que leia o número de identificação, as 3 notas obtidas por um aluno nas 3 verificações e a média dos exercícios que fazem parte da avaliação, e calcule a média de aproveitamento, usando a fórmula:
+* MA := (nota1 + nota 2 * 2 + nota 3 * 3 + ME)/7
+
+A atribuição dos conceitos obedece a tabela abaixo. O algoritmo deve escrever o número do aluno, suas notas, a média dos exercícios, a média de aproveitamento, o conceito correspondente e a mensagem 'Aprovado' se o conceito for A, B ou C, e 'Reprovado' se o conceito for D ou E.
+* >= 90 A
+* >= 75 e < 90 B
+* >= 60 e < 75 C
+* >= 40 e < 60 D
+* < 40 E
+``` portugol
+programa {
+inclua biblioteca Matematica --> mat
+	funcao inicio() {
+		cadeia id, conceito = ""
+		real nota1, nota2, nota3, ME, MA
+		escreva("Número de identificação: ") leia(id)
+		escreva("Nota 1: ") leia(nota1)
+		escreva("Nota 2: ") leia(nota2)
+		escreva("Nota 3: ") leia(nota3)
+		escreva("Média dos exercícios: ") leia(ME)
+		MA = (nota1 + (nota2 * 2) + (nota3 * 3) + ME) / 7
+		
+		se (MA >= 90) {
+			conceito = "A"
+		} senao se (MA >= 75 e MA < 90) {
+			conceito = "B"
+		} senao se (MA >= 60 e MA < 75) {
+			conceito = "C"
+		} senao se (MA >= 40 e MA < 60) {
+			conceito = "D"
+		} senao se (MA >= 0 e MA < 40) {
+			conceito = "E"
+		}
+		
+		se (conceito == "A" ou conceito == "B" ou conceito == "C") {
+			escreva("\nAprovado")
+		} senao {
+			escreva("\nReprovado")
+		}
+
+		escreva("\nID: ", id, "\nNota 1: ", nota1, "\nNota 2: ", nota2, "\nNota 3: ", nota3, "\nMédia dos exercícios: ", ME, "\nConceito: ", conceito)
+	}
+}
 ```
 
 
-## Aula 03 (05/04)
+## Aula 03 (05/04/22)
 **01.**
 ``` portugol
 programa {
@@ -128,7 +423,7 @@ inclua biblioteca Matematica --> mat
 ```
 
 
-## Aula 04 (12/04)
+## Aula 04 (12/04/22)
 **01.**
 ``` portugol
 programa {
@@ -139,12 +434,12 @@ inclua biblioteca Matematica --> mat
 		 
 		escreva("\n", A, " | ", B," | ", C,"\n--|---|--\n", D," | ", E," | ", F,"\n--|---|--\n", G," | ", H," | ", I,"\n")
 		
-	     se ((A == 1 e B == 1 e C == 1) ou (D == 1 e E == 1 e F == 1) ou (G == 1 e H == 1 e I == 1) ou (A == 1 e E == 1 e I == 1) ou (C == 1 e E == 1 e G == 1) ou (A == 1 e D == 1 e G == 1) ou (B == 1 e E == 1 e H == 1) ou (C == 1 e F == 1 e I == 1)) {
+	    se ((A == 1 e B == 1 e C == 1) ou (D == 1 e E == 1 e F == 1) ou (G == 1 e H == 1 e I == 1) ou (A == 1 e E == 1 e I == 1) ou (C == 1 e E == 1 e G == 1) ou (A == 1 e D == 1 e G == 1) ou (B == 1 e E == 1 e H == 1) ou (C == 1 e F == 1 e I == 1)) {
 	     	escreva("\n1 : Vitória!\n")
-	     } senao se ((A == 2 e B == 2 e C == 2) ou (D == 2 e E == 2 e F == 2) ou (G == 2 e H == 2 e I == 2) ou (A == 2 e E == 2 e I == 2) ou (C == 2 e E == 2 e G == 2) ou (A == 2 e D == 2 e G == 2) ou (B == 2 e E == 2 e H == 2) ou (C == 2 e F == 2 e I == 2)) {
-	          escreva("\n2 : Vitória!\n")
-	     } senao {
-	          escreva("\nEmpate!\n")
+	    } senao se ((A == 2 e B == 2 e C == 2) ou (D == 2 e E == 2 e F == 2) ou (G == 2 e H == 2 e I == 2) ou (A == 2 e E == 2 e I == 2) ou (C == 2 e E == 2 e G == 2) ou (A == 2 e D == 2 e G == 2) ou (B == 2 e E == 2 e H == 2) ou (C == 2 e F == 2 e I == 2)) {
+	        escreva("\n2 : Vitória!\n")
+	    } senao {
+	        escreva("\nEmpate!\n")
 		}
 	}
 }
@@ -391,10 +686,72 @@ Fimalgoritmo
 ## Aula 09 (07/06/22)
 **01.** Escrever um algoritmo que lê um vetor V[6]. Conte, a seguir quantos valores de V são negativos e escreva esta informação.
 ``` visualg
+Algoritmo "atividade-01"
+Var
+v : vetor[1..6] de inteiro
+i, quant : inteiro
 
+Inicio
+para i de 1 ate 6 passo 1 faca
+	escreva("Posição ", i, ": ")
+	leia(v[i])
+	se (v[i] < 0) entao
+		quant <- quant + 1
+	fimse
+fimpara
+escreva("Negativos: ", quant)
+Fimalgoritmo
 ```
 
 **02.** Escrever um algoritmo que lê um vetor X(10) e o escreve. Substitua, a seguir, todos os valores nulos de X por 1 e escreva novamente o vetor x .
 ``` visualg
+Algoritmo "atividade-01"
+Var
+x, xi : vetor[1..10] de inteiro
+i : inteiro
 
+Inicio
+para i de 1 ate 10 passo 1 faca
+	escreva("Posição ", i, ": ")
+	leia(x[i])
+	xi[i] <- x[i]
+	se (x[i] = 0) entao
+		xi[i] <- 1
+	fimse
+fimpara
+
+escreval("Antes:")
+para i de 1 ate 10 passo 1 faca
+	escreva(x[i], " ")
+fimpara
+
+escreva("Depois:")
+para i de 1 ate 10 passo 1 faca
+	escreva(xi[i], " ")
+fimpara
+Fimalgoritmo
+```
+Outra resolução:
+``` visualg
+Algoritmo "atividade-02"
+Var
+    i : inteiro
+    v : vetor [1..10] de inteiro
+
+Inicio
+    Para i de 1 ate 10 faca
+         Escreva("DIGITE V[",i,"]:")
+         Leia(v[i])
+    FimPara
+
+    Para i de 1 ate 10 faca
+       Se (v[i] = 0 ) Entao
+           v[i] <- 1
+       FimSe
+    FimPara
+
+    Para i de 1 ate 10 faca
+         Escreval(V[i])
+    FimPara
+Fimalgoritmo
 ```
