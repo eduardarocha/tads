@@ -89,7 +89,7 @@ int main(void) {
 ```
 
 
-## Aula 03 (04/04)
+## Aula 03 (04/04/22)
 **01.** Implemente um programa que recebe a nota de um aluno e retorna o valor da sua bolsa-auxílio conforme a tabela abaixo:
 * 7 ≤ nota < 80 : R$ 500,00
 * 8 ≤ nota < 90 : R$ 700,00
@@ -236,7 +236,7 @@ return 0; }
 ```
 
 
-## Aula 04 (29/04)
+## Aula 04 (29/04/22)
 **01.** Fala um programa que lê um número inteiro e acumule os valores digitados até que o número digitado seja menor que zero. Ao sair do ciclo de repetição mostrar os valores que foram acumulados.
 ``` c
 # include <stdio.h>
@@ -329,7 +329,7 @@ int main(void) {
 ```
 
 
-## Aula 05 (20/05)
+## Aula 05 (20/05/22)
 **01.** Implemente uma função que recebe com parâmetro o ano de nascimento de uma pessoa e o ano atual, e imprime na tela se a pessoa é criança, adulto ou idoso. Sendo criança uma pessoa que tenho até 17 anos. A partir de 18 é considerada adulta e a partir de 65 anos é idosa.
 ``` c
 # include <stdio.h>
@@ -422,7 +422,7 @@ return minutos; }
 ```
 
 
-## Aula 06 (27/05)
+## Aula 06 (27/05/22)
 **01.** Escreva uma função que determine a média e a situação de um aluno em uma disciplina. A função recebe como parâmetros as duas notas de um aluno (p1, p2) e o ponteiro para uma variável (media), conforme o seguinte protótipo: "int situacao(float p1, float p2, float *media);". Na variável indicada pelo ponteiro media, a função deve armazenar a média do aluno, calculada como a média aritmética das notas das provas. Além disso, a função deve retornar a situação do aluno (0 – reprovado ou 1 – aprovado) de acordo com a média (6.0) para aprovação. O programa principal devera ler as duas notas, invocar a função e informa a média e a situação do aluno.
 ``` c
 #include <stdio.h>
@@ -536,7 +536,7 @@ float pagar(int *h, int *min) {
 ```
 
 
-## Aula 07 (03/06)
+## Aula 07 (03/06/22)
 **01.** Faça a tabuada do 1 até o 10.
 ``` c
 # include <stdio.h>

@@ -348,6 +348,7 @@ enquanto (voto <> 0) faca
 		q6 <- q6 + 1
 	fimescolha
 fimenquanto
+
 escreval("1 : ", q1)
 escreval("2 : ", q2)
 escreval("3 : ", q3)
@@ -358,6 +359,42 @@ Fimalgoritmo
 ```
 
 **03.** Uma empresa deseja aumentar seus preços em 20%. Faça um algoritmo que leia o código e o preço de custo de cada produto e calcule o preço novo. Calcule também, a média dos preços com e sem aumento. Mostre o código e o preço novo de cada produto e, no final, as médias. A entrada de dados deve terminar quando for lido um código de produto negativo.
+``` visualg
+Algoritmo "atividade-03"
+Var
+valorAntigo, valorAtual, mediaAntiga, somaAntiga, mediaAtual, somaAtual : real
+codigo, quant : inteiro
+
+Inicio
+repita
+	escreva("Código: ")
+	leia(codigo)
+	se (codigo >= 0) entao
+		escreva("Preço: R$ ")
+		leia(valorAntigo)
+		quant <- quant + 1
+		somaAntiga <- somaAntiga + valorAntigo
+		valorAtual <- valorAntigo + (valorAntigo * 0.2)
+		escreval("Novo preço: R$ ", valorAtual)
+		somaAtual <- somaAtual + valorAtual
+	fimse
+ate (codigo < 0)
+
+mediaAntiga <- somaAntiga / quant
+escreval("Média sem aumento: R$ ", mediaAntiga)
+mediaAtual <- somaAtual / quant
+escreval("Média com aumento: R$ ", mediaAtual)
+Fimalgoritmo
+```
+
+
+## Aula 09 (07/06/22)
+**01.** Escrever um algoritmo que lê um vetor V[6]. Conte, a seguir quantos valores de V são negativos e escreva esta informação.
+``` visualg
+
+```
+
+**02.** Escrever um algoritmo que lê um vetor X(10) e o escreve. Substitua, a seguir, todos os valores nulos de X por 1 e escreva novamente o vetor x .
 ``` visualg
 
 ```
