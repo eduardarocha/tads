@@ -1,7 +1,7 @@
 # C
 ## Aula 01
 **01.** Faça um programa que leia o ano atual e o ano de nascimento de uma pessoa, calcule e mostre a sua idade.
-``` c
+``` c++
 #include <stdio.h>
 int main(void) {
 	int anoAtual, anoNasc, idade;
@@ -14,7 +14,7 @@ int main(void) {
 ```
 
 **02.** Faça um programa que leia o valor da cotação do dolar atual e um valor em reais, calcule e mostre a quantidade de dolares que só é possível ser comparada com o valor lido. (float)
-``` c
+``` c++
 #include <stdio.h>
 int main(void) {
 	float dolar, reais, total;
@@ -29,7 +29,7 @@ int main(void) {
 
 ## Aula 02
 **01.** Fazer um programa em C que pergunta um valor em metros e imprime o correspondente em decímetros, centímetros e milímetros.
-``` c
+``` c++
 # include <stdio.h>
 # include <math.h>
 int main(void) {
@@ -45,7 +45,7 @@ int main(void) {
 
 **02.** Fazer um programa em "C" que pergunte um valor em graus Fahrenheit e imprime no vídeo o correspondente em graus Celsius usando a fórmula a seguir:
 C=(F - 32.0) / (9.0/5.0).
-``` c
+``` c++
 # include <stdio.h>
 # include <math.h>
 int main(void) {
@@ -58,7 +58,7 @@ int main(void) {
 ```
 
 **03.** Faça um programa que calcule e apresente em metros por segundo o valor da velocidade de um projétil que percorre uma determinada distância em quilômetros a um determinado espaço de tempo em minutos. Utilize a fórmula: VELOCIDADE ← (DISTÂNCIA * 1000) / (TEMPO * 60).
-``` c
+``` c++
 # include <stdio.h>
 # include <math.h>
 int main(void) {
@@ -72,7 +72,7 @@ int main(void) {
 ```
 
 **04.** Faça um programa para calcular e mostrar o valor do lucro ou prejuízo na compra e venda de ações. O programa deverá ler o preço de compra da ação, o preço de venda e a quantidade de ações. Além disso deverá deduzir do resultado o valor da corretagem e dos emolumentos. O valor da corretagem é $ 12.00 por operação de compra ou venda. Os emolumentos que são 2% do valor da operação sem considerar os emolumentos.
-``` c
+``` c++
 # include <stdio.h>
 # include <math.h>
 int main(void) {
@@ -95,7 +95,7 @@ int main(void) {
 * 8 ≤ nota < 90 : R$ 700,00
 * nota ≥ 9 : R$ 900,00
 * nota < 7 : R$ 0,00 (sem bolsa)
-``` c
+``` c++
 # include <stdio.h>
 int main(void) {
     int nota;
@@ -128,7 +128,7 @@ Após o aumento ser realizado, informe:
 * o salário antes do reajuste;
 * o valor do aumento;
 * o novo salário, após o aumento.
-``` c
+``` c++
 # include <stdio.h>
 int main(void) {
     float salarioAtual, aumento;
@@ -162,7 +162,7 @@ int main(void) {
 * furacão de categoria 3 178 a 209 km/h
 * furacão de categoria 4 210 a 249 km/h
 * furacão de categoria 5 maior que 249 km/h
-``` c
+``` c++
 # include <stdio.h>
 int main(void) {
     float velocidade;
@@ -200,7 +200,7 @@ int main(void) {
 * Entre 4.0 e zero = E
 
 O algoritmo deve mostrar na tela as notas, a média, o conceito correspondente e a mensagem “APROVADO” se o conceito for A, B ou C ou “REPROVADO” se o conceito for D ou E.
-``` c
+``` c++
 # include <stdio.h>
 int main(void) {
     float n1, n2, media;
@@ -238,7 +238,7 @@ return 0; }
 
 ## Aula 04 (29/04/22)
 **01.** Fala um programa que lê um número inteiro e acumule os valores digitados até que o número digitado seja menor que zero. Ao sair do ciclo de repetição mostrar os valores que foram acumulados.
-``` c
+``` c++
 # include <stdio.h>
 int main(void) {
     int n, soma = 0;
@@ -254,7 +254,7 @@ return 0; }
 ```
 
 **02.** Faça um programa que implemente um menu onde o usuário deverá ler opções através de uma variável inteira admitindo valores entre 1 e 5. Caso seja entrado um número diferente, o programa deverá solicitar que o usuário digite novamente o valor. 1 – Cadastrar, 2 – Consultar, 3 – Alterar, 4 – Excluir, 5 – Sair. Ao escolher uma das opções que não seja a sair, mostrar uma mensagem indicando a opção selecionada. Exemplo: “Você escolher a opção Cadastrar”.
-``` c
+``` c++
 # include <stdio.h>
 int main(void) {
     int menu;
@@ -288,7 +288,7 @@ return 0; }
 * o número de pessoas;
 * a idade média do grupo;
 * a menor idade e a maior idade.
-``` c
+``` c++
 # include <stdio.h>
 int main(void) {
     int idade, pessoas = 0, soma = 0, menor, maior; float media;
@@ -311,7 +311,7 @@ int main(void) {
 **04.** Faça um programa que receba dois números X e Y, sendo X < Y. Calcule e mostre:
 * a soma dos números pares desse intervalo de números, incluindo os números digitados;
 * a multiplicação dos números ímpares desse intervalo, incluindo os digitados.
-``` c
+``` c++
 # include <stdio.h>
 int main(void) {
     int x, y, soma = 0, mult = 1;
@@ -331,7 +331,7 @@ int main(void) {
 
 ## Aula 05 (20/05/22)
 **01.** Implemente uma função que recebe com parâmetro o ano de nascimento de uma pessoa e o ano atual, e imprime na tela se a pessoa é criança, adulto ou idoso. Sendo criança uma pessoa que tenho até 17 anos. A partir de 18 é considerada adulta e a partir de 65 anos é idosa.
-``` c
+``` c++
 # include <stdio.h>
 void calc_idade(int nasc, int ano);
 int main(void) {
@@ -355,7 +355,7 @@ void calc_idade(int nasc, int ano) {
 **02.**  Faça um programa que receba do usuário a sua altura, peso atual e gênero (0 masculino e 1 feminino), e imprima na tela se o usuário está acima ou abaixo de seu peso ideal. Para fazer essa verificação crie uma função que recebe como parâmetros a altura e o gênero de uma pessoa (0 masculino e 1 feminino) e retorna o seu peso ideal, utilizando as seguintes fórmulas:
 * Para gênero masculino: (72.7 * altura) – 58
 * Para gênero feminino: (62.1 * altura) – 44.7
-``` c
+``` c++
 # include <stdio.h>
 void calc_imc(float altura, char genero);
 int main(void) {
@@ -383,7 +383,7 @@ void calc_imc(float altura, char genero) {
 * 8 ≤ nota < 90 [R$ 700,00]
 * nota ≥ 9 [R$ 900,00]
 * nota < 7 [R$ 0,00] (sem bolsa)
-``` c
+``` c++
 # include <stdio.h>
 float bolsa(float nota);
 int main(void) {
@@ -406,7 +406,7 @@ return valor; }
 ```
 
 **04.** Implemente uma função que retorna o período em minutos decorrido entre os dois horários. A função deve receber 4 parâmetros inteiros, cada par de inteiros representando dois horários (horas e minutos, inicial e final).
-``` c
+``` c++
 #include <stdio.h>
 #include <windows.h>
 int calc_minutos(int h1, int m1, int h2, int m2);
@@ -424,7 +424,7 @@ return minutos; }
 
 ## Aula 06 (27/05/22)
 **01.** Escreva uma função que determine a média e a situação de um aluno em uma disciplina. A função recebe como parâmetros as duas notas de um aluno (p1, p2) e o ponteiro para uma variável (media), conforme o seguinte protótipo: "int situacao(float p1, float p2, float *media);". Na variável indicada pelo ponteiro media, a função deve armazenar a média do aluno, calculada como a média aritmética das notas das provas. Além disso, a função deve retornar a situação do aluno (0 – reprovado ou 1 – aprovado) de acordo com a média (6.0) para aprovação. O programa principal devera ler as duas notas, invocar a função e informa a média e a situação do aluno.
-``` c
+``` c++
 #include <stdio.h>
 int situacao(float p1, float p2, float *media);
 
@@ -447,7 +447,7 @@ int situacao(float p1, float p2, float *media) {
 * Retorne o maior dos valores.
 
 Imprima os dois valores, no formato: “(Valor maior) é maior que (valor menor)”.
-``` c
+``` c++
 #include <stdio.h>
 int numeros(int *a, int *b);
 
@@ -474,7 +474,7 @@ int numeros(int *a, int *b) {
 * 4 – Sair.
 
 Deverá ser implementado duas funções uma para depósito e outra para saque. Caso o valor a ser sacado for maior que o saldo, não executar a operação exibir uma mensagem: “Saldo insuficiente”. Utilizar variável global para controlar o saldo.
-``` c
+``` c++
 #include <stdio.h>
 void deposito(); void saque();
 float saldo, valor;
@@ -505,7 +505,7 @@ void saque() {
 ```
 
 **04.** Faça um programa para controlar os dados de um estacionamento. O estacionamento cobra R$5,00 de taxa para estacionar até cinco horas, e cobra um adicional de R$1,00 por hora ou fração caso sejam excedidas as cinco horas. A taxa máxima para qualquer período determinado de 24 horas é R$ 20,00, supondo que nenhum carro fique estacionado por mais de 24 horas. O programa deverá ler a identificação do carro e quantidade de horas que cliente ficou estacionado até que o usuário digite 0 para a identificação do veículo. A cada leitura o programa deverá calcular e imprimir o valor a ser pago pelo cliente. O programa deverá acumular o total recebido pelo estacionamento e o final da execução mostrar o total recebido. O programa deverá ter uma função para calcular o valor a ser pago pelo cliente, que receberá com parâmetro a quantidade de horas e retornar o valor a ser pago. Utilizar uma variável static para armazenar o total recebido.
-``` c
+``` c++
 # include <stdio.h>
 # include <stdlib.h> // Biblioteca Linux, permite o "system("clear");"
 float pagar(int *h, int *min);
@@ -538,10 +538,11 @@ float pagar(int *h, int *min) {
 
 ## Aula 07 (03/06/22)
 **01.** Faça a tabuada do 1 até o 10.
-``` c
+``` c++
 # include <stdio.h>
 int main(void) {
     int total;
+
     for (int i = 1; i <= 10; i++) {
         printf("\nTabuada do %d\n", i);
         for (int j = 1; j <= 10; j++) {
@@ -552,20 +553,219 @@ int main(void) {
 ```
 
 **02.** Faça uma matriz 3x3 e receba o valor de cada posição a partir de leitura do usuário, ao final, mostrando na tela a sua diagonal princiapal e sucundária.
-``` c
+``` c++
 # include <stdio.h>
 int main(void) {
     int m[3][3], dp[3], ds[3], a = 0, b = 0;
+
     for (int i = 0; i <= 2; i++) {
         for (int j = 0; j <= 2; j++) {
             printf("(%d, %d): ", i, j); scanf("%d", &m[i][j]);
-            if (i == j) {dp[a] = m[i][j]; a++;}
-            if (i + j == 2) {ds[b] = m[i][j]; b++;}
+            if (i == j) { dp[a] = m[i][j]; a++; }
+            if (i + j == 2) { ds[b] = m[i][j]; b++; }
         }
     }
+
     printf("\nDiagonal principal: ");
-    for (int i = 0; i < a; i++) {printf("%d ", dp[i]);}
+    for (int i = 0; i < a; i++) { printf("%d ", dp[i]); }
+
     printf("\nDiagonal secundaria: ");
-    for (int i = 0; i < b; i++) {printf("%d ", ds[i]);}
+    for (int i = 0; i < b; i++) { printf("%d ", ds[i]); }
+}
+```
+
+
+## Aula 08 (10/06/22)
+**01.** Crie um vetor que armazene 5 números e imprima esses valores.
+``` c++
+# include <stdio.h>
+int main(void) {
+    int v[5];
+
+    for (int i = 0; i <= 4; i++) {
+        printf("Posicao %d: ", i); scanf("%d", &v[i]);
+    }
+    for (int i = 0; i <= 4; i++) {
+        printf("%d ", v[i]);
+    }
+}
+```
+
+**02.** Crie um vetor que armazene 5 números e depois some todos os valores, depois mostre o resultado. 
+``` c++
+# include <stdio.h>
+int main(void) {
+    int v[5], soma = 0;
+
+    for (int i = 0; i <= 4; i++) {
+        printf("Posicao %d: ", i); scanf("%d", &v[i]);
+        soma += v[i];
+    }
+    printf("Soma: %d", soma);
+}
+```
+
+**03.** Crie um programa que leia 10 números e armazene os números pares em um vetor e os números impares em outro vetor.
+``` c++
+# include <stdio.h>
+int main(void) {
+    int v[10], par[10], impar[10];
+
+    for (int i = 0; i <= 9; i++) {
+        par[i] = 0; impar[i] = 0;
+    }
+    for (int i = 0; i <= 9; i++) {
+        printf("Posicao %d: ", i); scanf("%d", &v[i]);
+        if (v[i] % 2 == 0) { par[i] = v[i]; }
+        else { impar[i] = v[i]; }
+    }
+    printf("\nPares: ");
+    for (int i = 0; i <= 9; i++) {
+        printf("%d ", par[i]);
+    }
+    printf("\nImpares: ");
+    for (int i = 0; i <= 9; i++) {
+        printf("%d ", impar[i]);
+    }
+}
+```
+
+**04.** Crie um vetor que armazene 10 números e depois some o elemento da posição inicial com todos os outros valores e mostre o resultado. 
+``` c++
+# include <stdio.h>
+int main(void) {
+    int v[10], soma = 0;
+
+    for (int i = 0; i <= 9; i++) {
+        printf("Posicao %d: ", i); scanf("%d", &v[i]);
+        if (i != 0) { soma += v[0] + v[i]; }
+    }
+    printf("Soma: %d", soma);
+}
+```
+
+**05.** Escreva um algoritmo em que armazene em um vetor todos os números múltiplos de 5, no intervalo fechado de 1 a 500. Após isso, o algoritmo deve imprimir todos os valores armazenados.
+``` c++
+# include <stdio.h>
+int main(void) {
+    int v[500];
+
+    for (int i = 0; i <= 500; i += 5) {
+        v[i] = i;
+        v[0] = 1;
+        printf("%d ", v[i]);
+    }
+}
+```
+
+**06.** Escreva um programa que solicite do usuário 20 números reais e armazene em um vetor, calcule a média dos números e informe quantos estão abaixo da média, e quantos estão na média.
+``` c++
+# include <stdio.h>
+int main(void) {
+    float v[20], soma = 0, media;
+    int abaixo = 0, acima = 0;
+
+    for (int i = 0; i <= 19; i++) {
+        printf("Posicao %d: ", i); scanf("%f", &v[i]);
+        soma += v[i];
+    }
+    media = soma / 20;
+
+    for (int i = 0; i <= 19; i++) {
+        if (v[i] < media) { abaixo++;} else {acima++; }
+    }
+    printf("Abaixo: %d\nAcima: %d", abaixo, acima);
+}
+```
+
+**07.** Escreva um algoritmo que receba a altura de 10 atletas e armazene em um vetor. Esse algoritmo deve imprimir a altura daqueles atletas que tem altura maior que a média.
+``` c++
+# include <stdio.h>
+int main(void) {
+    float v[10], soma = 0, media;
+
+    for (int i = 0; i <= 9; i++) {
+        printf("Atleta %d: ", i); scanf("%f", &v[i]);
+        soma += v[i];
+    }
+    media = soma / 10;
+
+    printf("\nAltura > media: ");
+    for (int i = 0; i <= 9; i++) {
+        if (media < v[i]) { printf("%.2f ", v[i]); }
+    }
+}
+```
+
+**08.** Faça um algoritmo que leia uma matriz mat 2x3 e imprima na tela a soma de todos os elementos da matriz mat.
+``` c++
+# include <stdio.h>
+int main(void) {
+    int mat[2][3], soma = 0;
+
+    for (int i = 0; i <= 1; i++) {
+        for (int j = 0; j <= 2; j++) {
+            printf("(%d, %d): ", i, j); scanf("%d", &mat[i][j]);
+            soma += mat[i][j];
+        }
+    }
+    printf("Soma: %d", soma);
+}
+```
+
+**09.** Faça um algoritmo que leia uma matriz mat 4x4, e imprima na tela a soma dos elementos abaixo da diagonal principal da matriz mat.
+``` c++
+# include <stdio.h>
+int main(void) {
+    int mat[4][4], soma = 0;
+
+    for (int i = 0; i <= 3; i++) {
+        for (int j = 0; j <= 3; j++) {
+            printf("(%d, %d): ", i, j); scanf("%d", &mat[i][j]);
+
+            if (0 < i && j == 0) { soma += mat[i][j]; }
+            else {
+                if (1 < i && j == 1) { soma += mat[i][j]; }
+                else {
+                    if (2 < i && j == 2) { soma += mat[i][j]; }
+                }
+            }
+        }
+    }
+    printf("Soma: %d", soma);
+}
+```
+
+**10.** Escreva um algoritmo que lê uma matriz M(5,5) e calcule as somas:
+* da linha 4 de M
+* da coluna 2 de M
+* da diagonal principal
+* da diagonal secundária
+* de todos os elementos da matriz
+* escreva estas somas e a matriz
+``` c++
+# include <stdio.h>
+int main(void) {
+    int m[5][5], soma = 0, soma_i4 = 0, soma_j2 = 0, soma_DP = 0, soma_DS = 0;
+
+    for (int i = 0; i <= 4; i++) {
+        for (int j = 0; j <= 4; j++) {
+            printf("(%d, %d): ", i, j); scanf("%d", &m[i][j]);
+
+            soma += m[i][j];
+            if (i == 4) { soma_i4 += m[i][j]; }
+            if (j == 2) { soma_j2 += m[i][j]; }
+            if (i == j) { soma_DP += m[i][j]; }
+            if (i + j == 4) { soma_DS += m[i][j]; }
+        }
+    }
+    printf("\nTotal: %d\nLinha i4: %d\nColuna j2: %d\nDiagonal principal: %d\nDiagonal secundaria: %d\n\nMatriz:\n", soma, soma_i4, soma_j2, soma_DP, soma_DS);
+
+    for (int i = 0; i <= 4; i++) {
+        for (int j = 0; j <= 4; j++) {
+            if (j == 4) { printf("%d\n", m[i][j]); }
+            else { printf("%d ", m[i][j]); }
+        }
+    }
 }
 ```
