@@ -10,7 +10,7 @@
 
 
 ## Subprograma/função principal
-``` c
+``` c++
 int main(void) {
 	// Instruções...
 	return 0;
@@ -34,7 +34,7 @@ int main(void) {
 `"%s", &var` : Caracter[n], sendo n > 1.
 
 **Em arquivo teste.cpp, usando o tipo de variável int:**
-``` c
+``` c++
 #include <stdio.h>
 int main(void) {
 	int n1, n2, n3, soma;
@@ -47,7 +47,7 @@ int main(void) {
 }
 ```
 **Em arquivo teste.cpp, usando o tipo de variável char:**
-``` c
+``` c++
 # include <stdio.h>
 #include <string.h>
 int main(void) {
@@ -61,23 +61,23 @@ int main(void) {
 
 ## Funções
 Declaração do protótipo de uma função ocorre, de forma simplificada, quando a função está definida depois da função principal `int main(void) {`.
-``` c
+``` c++
 int int calc_idade(int nasc, int ano);
 ```
 Definição de uma função simples utilizando "**void**" como tipo de retorno e parâmetros: `hello();`.
-``` c
+``` c++
 void hello(void) {
 	printf("Olá, mundo!");
 }
 ```
 Definição de uma função que utiliza "**void**" como tipo de retorno e um parâmetro do tipo "**char**": `hello("Olá, mundo!");`.
-``` c
+``` c++
 void hello(char n[15]) {
 	printf("%s", &n);
 }
 ```
 Definição de uma função com retorno e parâmetros: `calc_idade(2004, 2022);`.
-``` c
+``` c++
 int calc_idade(int nasc, int ano) {
 	int idade;
 	idade = ano - nasc;
