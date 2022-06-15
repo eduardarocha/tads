@@ -1,4 +1,4 @@
-# C
+# C++
 ## Preprocessadores
 `# include <stdio.h>` : Biblioteca input/output.
 
@@ -33,28 +33,49 @@ int main(void) {
 
 `"%s", &var` : Caracter[n], sendo n > 1.
 
-**Em arquivo teste.cpp, usando o tipo de variável int:**
+**Usando o tipo de variável int:**
 ``` c++
 #include <stdio.h>
+
 int main(void) {
 	int n1, n2, n3, soma;
 	printf("n1: "); scanf("%d", &n1);
 	printf("n2: "); scanf("%d", &n2);
 	printf("n3: "); scanf("%d", &n3);
+
 	soma = n1 + n2;
 	printf("Soma = %d", soma);
-	return 0;
 }
 ```
-**Em arquivo teste.cpp, usando o tipo de variável char:**
+
+**Usando o tipo de variável char em matrizes:**
 ``` c++
-# include <stdio.h>
+#include <stdio.h>
+
+int main(void) {
+    char *matriz[3][3];
+    for (int i = 0; i <= 2; i++) {
+        for (int j = 0; j<= 2; j++) {
+            printf("(i%d, j%d): ", i, j); scanf("%s", &matriz[i][j]);
+        }
+    }
+    for (int i = 0; i <= 2; i++) {
+        for (int j = 0; j<= 2; j++) {
+            printf("%s ", &matriz[i][j]);
+        }
+    }
+}
+```
+
+**Usando a biblioteca string.h:**
+``` c++
+#include <stdio.h>
 #include <string.h>
+
 int main(void) {
     char conceito[10] = "";
     printf("Caracteres: "); scanf("%s", &conceito);
     printf("\nResposta: %s", conceito);
-    return 0;
 }
 ```
 
