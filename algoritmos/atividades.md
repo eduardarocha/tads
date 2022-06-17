@@ -689,69 +689,275 @@ Fimalgoritmo
 Algoritmo "atividade-01"
 Var
 v : vetor[1..6] de inteiro
-i, quant : inteiro
+i, negativos : inteiro
 
 Inicio
-para i de 1 ate 6 passo 1 faca
+para i de 1 ate 6 faca
 	escreva("Posição ", i, ": ")
 	leia(v[i])
 	se (v[i] < 0) entao
-		quant <- quant + 1
+		negativos <- negativos + 1
 	fimse
 fimpara
-escreva("Negativos: ", quant)
+escreva("Negativos: ", negativos)
 Fimalgoritmo
 ```
 
 **02.** Escrever um algoritmo que lê um vetor X(10) e o escreve. Substitua, a seguir, todos os valores nulos de X por 1 e escreva novamente o vetor x .
 ``` visualg
-Algoritmo "atividade-01"
+Algoritmo "atividade-02"
 Var
-x, xi : vetor[1..10] de inteiro
+x : vetor[1..10] de inteiro
 i : inteiro
 
 Inicio
 para i de 1 ate 10 passo 1 faca
 	escreva("Posição ", i, ": ")
 	leia(x[i])
-	xi[i] <- x[i]
 	se (x[i] = 0) entao
-		xi[i] <- 1
+		x[i] <- 1
 	fimse
 fimpara
-
-escreval("Antes:")
 para i de 1 ate 10 passo 1 faca
 	escreva(x[i], " ")
 fimpara
+Fimalgoritmo
+```
 
-escreva("Depois:")
+**03.** Escrever um algoritmo que lê um vetor C[50]. Encontre, a seguir, o maior elemento de C e o escreva.
+``` visualg
+Algoritmo "atividade-03"
+Var
+c : vetor[1..50] de inteiro
+i, maior : inteiro
+
+Inicio
+escreva("Posição 1: ")
+leia(c[1])
+maior <- c[1]
+para i de 2 ate 50 passo 1 faca
+	escreva("Posição ", i, ": ")
+	leia(c[i])
+	se (maior < c[i]) entao
+		maior <- c[i]
+	fimse
+fimpara
+escreva("Maior: ", maior)
+Fimalgoritmo
+```
+
+**04.** Escrever um algoritmo que lê um vetor N[80]. Encontre, a seguir, o menor elemento e a sua posição no vetor N e escreva: “o menor elemento de n é = ”, M, “e a sua posição é = ”, P.
+``` visualg
+Algoritmo "atividade-04"
+Var
+n : vetor[1..80] de inteiro
+i, m, p : inteiro
+
+Inicio
+escreva("Posição 1: ")
+leia(n[1])
+m <- n[1]
+para i de 2 ate 80 passo 1 faca
+	escreva("Posição ", i, ": ")
+	leia(n[i])
+	se (n[i] < m) entao
+		m <- n[i]
+		p <- i
+	fimse
+fimpara
+escreva("o menor elemento de n[80] é ", m, " e a sua posição é ", p)
+Fimalgoritmo
+```
+
+**05.** Escrever um algoritmo que lê um vetor N[20]. Troque, a seguir, o 1º elemento com o último, o 2º com o penúltimo, etc., até o 10º com o 11º e escreva o vetor N assim modificado.
+``` visualg
+Algoritmo "atividade-05"
+Var
+n : vetor[1..20] de inteiro
+i, ordem : inteiro
+
+Inicio
+para i de 1 ate 20 passo 1 faca
+	escreva("n[", i, "] = ")
+	leia(n[i])
+fimpara
 para i de 1 ate 10 passo 1 faca
-	escreva(xi[i], " ")
+	ordem <- n[i]
+	n[i] <- n[21 - i]
+	n[21 - i] <- ordem
+fimpara
+para i de 1 ate 20 passo 1 faca
+	escreval("Mod. n[", i, "] = ", n[i])
 fimpara
 Fimalgoritmo
 ```
-Outra resolução:
+
+**06.** Escrever um algoritmo que lê um vetor K(20) e o escreve. Troque, a seguir, os elementos de ordem ímpar com os de ordem par imediatamente seguintes e escreva o vetor k modificado.
 ``` visualg
-Algoritmo "atividade-02"
+Algoritmo "atividade-06"
 Var
-    i : inteiro
-    v : vetor [1..10] de inteiro
+k : vetor[1..20] de inteiro
+i, ordem : inteiro
 
 Inicio
-    Para i de 1 ate 10 faca
-         Escreva("DIGITE V[",i,"]:")
-         Leia(v[i])
-    FimPara
-
-    Para i de 1 ate 10 faca
-       Se (v[i] = 0 ) Entao
-           v[i] <- 1
-       FimSe
-    FimPara
-
-    Para i de 1 ate 10 faca
-         Escreval(V[i])
-    FimPara
+para i de 1 ate 20 passo 1 faca
+	escreva("k[", i, "] = ")
+	leia(k[i])
+fimpara
+para i de 1 ate 19 passo 2 faca
+	ordem <- k[i]
+	k[i] <- k[i + 1]
+	k[i + 1] <- ordem
+fimpara
+para i de 1 ate 20 passo 1 faca
+	escreval("Mod. k[", i, "] = ", k[i])
+fimpara
 Fimalgoritmo
+```
+
+**07.** Escrever um algoritmo que lê um vetor N[20] e o escreve. Troque, a seguir, o 1º elemento com 11º, o 2º com o 12º, etc., até o 10º com o 20º e escreva o vetor assim modificado.
+``` visualg
+Algoritmo "atividade-07"
+Var
+n : vetor[1..20] de inteiro
+i, ordem : inteiro
+
+Inicio
+para i de 1 ate 20 passo 1 faca
+	escreva("n[", i, "] = ")
+	leia(n[i])
+fimpara
+para i de 1 ate 10 passo 1 faca
+	ordem <- n[i]
+	n[i] <- n[i + 10]
+	n[i + 10] <- ordem
+fimpara
+para i de 1 ate 20 passo 1 faca
+	escreval("Mod. n[", i, "] = ", n[i])
+fimpara
+Fimalgoritmo
+```
+
+**08.** Escrever um algoritmo que lê um vetor G[20] (gabarito) e a seguir lê um número não determinado de números de alunos e vetores R[20] (resposta), um número e um vetor R de cada vez. O número representa o número de um aluno e o vetor R representa o conjunto de respostas daquele aluno. Para cada aluno calcular o nº de acertos e calcular a nota. nota = número de acertos * 0.5 Escrever o nº do aluno, sua nota e a mensagem "aprovado" se tiver nota maior ou igual a 5 ou "reprovado" se a nota for menor do que 5.
+``` visualg
+Algoritmo "atividade-08"
+Var
+g, r : vetor[1..20] de inteiro
+i, id, sair, acertos : inteiro
+nota : real
+
+Inicio
+para i de 1 ate 20 passo 1 faca
+	escreva("g[", i, "] = ")
+	leia(g[i])
+fimpara
+
+enquanto (sair = 0) faca
+	acertos <- 0
+	escreva("ID: ")
+	leia(id)
+	para i de 1 ate 20 passo 1 faca
+		escreva("r[", i, "] = ")
+		leia(r[i])
+		se (r[i] = g[i]) entao
+			acertos <- acertos + 1
+		fimse
+	fimpara
+	nota <- acertos * 0.5
+	se (5 <= nota) entao
+		escreval("Aprovado(a)")
+	senao
+		escreval("Reprovado(a)")
+	fimse
+	escreval("ID: ", id)
+	escreval("Nota: ", nota)
+
+	escreval("Sair? 1-Sim | 0-Não")
+	leia(sair)
+fimenquanto
+Fimalgoritmo
+```
+
+**09.** Escrever um algoritmo que lê 2 vetores K[10] e N[10] e os escreve. Crie, a seguir, um vetor M que seja a diferença entre K e N (M = K - N) e escreva o vetor M.
+``` visualg
+Algoritmo "atividade-09"
+Var
+k, n, m : vetor[1..10] de inteiro
+i : inteiro
+
+Inicio
+para i de 1 ate 10 passo 1 faca
+	escreva("k[", i, "] = ")
+	leia(k[i])
+	escreva("n[", i, "] = ")
+	leia(n[i])
+fimpara
+para i de 1 ate 10 passo 1 faca
+	m[i] <- k[i] - n[i]
+	escreval("m[", i, "] = ", m[i])
+fimpara
+Fimalgoritmo
+```
+
+**10.** Escrever um algoritmo que lê um vetor G[13] que é o Gabarito de um teste da loteria esportiva, contendo os valores 1 (coluna 1), 2(coluna 2), e 3(coluna do meio). Ler, a seguir, para cada apostador, o nº de seu cartão e um vetor Resposta R[13]. Verificar para cada apostador o nº de acertos e escrever o nº do apostador e seu número de acertos. Se tiver 13 acertos, acrescentar a mensagem: "ganhador, parabéns!".
+``` visualg
+Algoritmo "atividade-10"
+Var
+g, r : vetor[1..13] de inteiro
+i, id, sair, acertos: inteiro
+
+Inicio
+para i de 1 ate 13 passo 1 faca
+	escreva("g[", i, "] = ")
+	leia(g[i])
+fimpara
+
+enquanto (sair = 0) faca
+	acertos <- 0
+	escreva("ID: ")
+	leia(id)
+	para i de 1 ate 13 passo 1 faca
+		escreva("r[", i, "] = ")
+		leia(r[i])
+		se (g[i] = r[i]) entao
+			acertos <- acertos + 1
+		fimse
+	fimpara
+	escreval("ID: ", id)
+	escreval("Acertos: ", acertos)
+	se (acertos = 13) entao
+		escreval("Ganhador(a), parabéns!")
+	fimse
+
+	escreval("Sair? 1-Sim | 0-Não")
+	leia(sair)
+fimenquanto
+Fimalgoritmo
+```
+
+**11.** Escrever um algoritmo que gera os 10 primeiros números primos acima de 100 e os armazena em um vetor X(10) escrevendo, no final, o vetor X.
+``` visualg
+Algoritmo "atividade-11"
+Var
+x : vetor[1..10] de inteiro
+i : inteiro
+
+Inicio
+
+
+para i de 1 ate 10 passo 1 faca
+	escreval("x[", i, "] = ", x[i])
+fimpara
+Fimalgoritmo
+```
+
+**12.** Escrever um algoritmo que lê um vetor A[15] e o escreve. Ordene, a seguir os elementos de A em ordem crescente e escreva novamente A.
+``` visualg
+
+```
+
+
+## Aula 10 (14/06/22)
+**01.** 
+``` visualg
 ```
