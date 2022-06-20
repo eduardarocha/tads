@@ -804,11 +804,13 @@ para i de 1 ate 20 passo 1 faca
 	escreva("k[", i, "] = ")
 	leia(k[i])
 fimpara
+
 para i de 1 ate 19 passo 2 faca
 	ordem <- k[i]
 	k[i] <- k[i + 1]
 	k[i + 1] <- ordem
 fimpara
+
 para i de 1 ate 20 passo 1 faca
 	escreval("Mod. k[", i, "] = ", k[i])
 fimpara
@@ -940,10 +942,21 @@ Fimalgoritmo
 Algoritmo "atividade-11"
 Var
 x : vetor[1..10] de inteiro
-i : inteiro
+i, j, n, quant : inteiro
 
 Inicio
-
+para i de 100 ate 150 passo 1 faca
+	quant <- 0
+	para j de 2 ate 13 passo 1 faca
+		se (i % j <> 0) entao
+			quant <- quant + 1
+		fimse
+	fimpara
+	se (quant = 12) entao
+		n <- n + 1
+		x[n] <- i
+	fimse
+fimpara
 
 para i de 1 ate 10 passo 1 faca
 	escreval("x[", i, "] = ", x[i])
@@ -953,11 +966,144 @@ Fimalgoritmo
 
 **12.** Escrever um algoritmo que lê um vetor A[15] e o escreve. Ordene, a seguir os elementos de A em ordem crescente e escreva novamente A.
 ``` visualg
+Algoritmo "atividade-12"
+Var
+a: vetor[1..15] de inteiro
+i, j, ordem : inteiro
 
+Inicio
+para i de 1 ate 15 passo 1 faca
+	escreva("a[", i, "] = ")
+	leia(a[i])
+fimpara
+
+para i de 1 ate 15 passo 1 faca
+	para j de i ate 15 passo 1 faca
+		se (a[j] < a[i]) entao
+			ordem <- a[i]
+			a[i] <- a[j]
+			a[j] <- ordem
+		fimse
+	fimpara
+fimpara
+
+para i de 1 ate 15 passo 1 faca
+	escreval("Mod. b[", i, "] = ", a[i])
+fimpara
+Fimalgoritmo
 ```
 
 
 ## Aula 10 (14/06/22)
-**01.** 
+**01.** Escreva um algoritmo que lê uma matriz M(5,5) e calcula as somas, ao final, escreva estas somas e a matriz:
+* da linha 4 de M
+* da coluna 2 de M
+* da diagonal principal
+* da diagonal secundária
+* de todos os elementos da matriz
 ``` visualg
+Algoritmo "atividade-01"
+Var
+m : vetor[1..5, 1..5] de inteiro
+i, j, soma, somaL4, somaC2, somaDP, somaDS : inteiro
+
+Inicio
+para i de 1 ate 5 passo 1 faca
+	para j de 1 ate 5 passo 1 faca
+		escreva("m[", i, ", ", j, "] = ")
+		leia(m[i, j])
+		se (i = 4) entao
+			somaL4 <- somaL4 + m[i, j]
+		fimse
+		se (j = 2) entao
+			somaC2 <- somaC2 + m[i, j]
+		fimse
+		se (i = j) entao
+			somaDP <- somaDP + m[i, j]
+		fimse
+		se (i + j = 6) entao
+			somaDS <- somaDS + m[i, j]
+		fimse
+		soma <- soma + m[i, j]
+	fimpara
+fimpara
+
+escreval("i4: ", somaL4, " | j2: ", somaC2)
+escreval("D. principal: ", somaDP, " | D. secundária: ", somaDS)
+escreval("Soma total: ", soma)
+Fimalgoritmo
+```
+
+**02.** Escrever um algoritmo que lê uma matriz M(10,10) e a escreve. Troque, a seguir e escreva a matriz assim modificada:
+* a linha 2 com a linha 8.
+* a coluna 4 com a coluna 10
+* a diagonal principal com a secundária
+* a linha 5 com a coluna 10
+``` visualg
+Algoritmo "atividade-02"
+Var
+m : vetor[1..10, 1..10] de inteiro
+DP, DS : vetor[1..10] de inteiro
+i, j, ordem : inteiro
+
+Inicio
+para i de 1 ate 10 passo 1 faca
+	para j de 1 ate 10 passo 1 faca
+		escreva("m[", i, ", ", j, "] = ")
+		leia(m[i, j])
+	fimpara
+fimpara
+
+para i de 1 ate 10 passo 1 faca
+	para j de 1 ate 10 passo 1 faca
+		se (i = 2) entao
+			ordem <- m[i, j]
+			m[i, j] <- m[8, j]
+			m[8, j] <- ordem
+		fimse
+		se (j = 4) entao
+			ordem <- m[i, j]
+			m[i, j] <- m[i, 10]
+			m[i, 10] <- ordem
+		fimse
+		se (i = j) entao
+			DP[i] <- m[i, j]
+		fimse
+		se (i + j = 9) entao
+			DS[i] <- m[i, j]
+		fimse
+		se (i = 5) entao
+			ordem <- m[i, j]
+			m[i, j] <- m[i, 10]
+			m[i, 10] <- ordem
+		fimse
+	fimpara
+fimpara
+para i de 1 ate 10 passo 1 faca
+	para j de 1 ate 10 passo 1 faca
+		ordem <- DP[i]
+		DP[i] <- DS[i]
+		DS[i] <- ordem
+		se (i = j) entao
+
+		fimse
+	fimpara
+fimpara
+
+para i de 1 ate 10 passo 1 faca
+	para j de 1 ate 10 passo 1 faca
+		escreval("m[", i,", ", j,"] = ", m[i, j])
+	fimpara
+fimpara
+Fimalgoritmo
+```
+
+**03.** Escrever um algoritmo que lê uma matriz M(6,6) e um valor A e multiplica a matriz M pelo valor A e coloca os valores da matriz multiplicados por A em um vetor de V(36) e escreve no final o vetor V.
+``` visualg
+
+```
+
+**04.** Escrever um algoritmo que lê uma matriz M(5,5) e cria 2 vetores SL(5), SC(5) que contenham respectivamente as somas das linhas e das colunas de M. Escrever a matriz e os vetores criados.
+``` visualg
+
 ```
