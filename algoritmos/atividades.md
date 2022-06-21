@@ -457,8 +457,33 @@ inclua biblioteca Matematica --> mat
 ``` visualg
 ```
 
+## Prova (24/05/22)
+**01.** Escreva um algoritmo que lê 4 pares de valores a, b, todos inteiros e positivos, um par de cada vez, e com a < b, e escreve os inteiros pares de a até b, incluindo o a e b se forem pares. (utilizar o laço de repetição "enquanto")
+``` visualg
+Algoritmo "teste"
+Var
+a, b, i, j : inteiro
 
-## Aula 07 (12/04)
+Inicio
+a <- b - 1
+enquanto (a < b) e (i < 4) faca
+    para i de 1 ate 4 passo 1 faca
+        escreva("a = ")
+        leia(a)
+        escreva("b = ")
+        leia(b)
+
+        para j de a ate b passo 1 faca
+            se (j % 2 = 0) entao
+                escreval(j, " ")
+            fimse
+        fimpara
+    fimpara
+fimenquanto
+Fimalgoritmo
+```
+
+## Aula 07 (12/04/22)
 **01.** Escrever um algoritmo que lê um número não conhecido de valores, um de cada vez, e conta quantos deles estão em cada um dos intervalos [0, 50], (50, 100], (100,200]. O algoritmo deve encerrar quando for informado um valor fora dos intervalos.
 ``` visualg
 Algoritmo "atividade-01"
@@ -1051,6 +1076,13 @@ para i de 1 ate 10 passo 1 faca
 	para j de 1 ate 10 passo 1 faca
 		escreva("m[", i, ", ", j, "] = ")
 		leia(m[i, j])
+		
+		se (i = j) entao
+			DP[i] <- m[i, j]
+		fimse
+		se (i + j = 11) entao
+			DS[i] <- m[i, j]
+		fimse
 	fimpara
 fimpara
 
@@ -1061,31 +1093,31 @@ para i de 1 ate 10 passo 1 faca
 			m[i, j] <- m[8, j]
 			m[8, j] <- ordem
 		fimse
+
 		se (j = 4) entao
 			ordem <- m[i, j]
 			m[i, j] <- m[i, 10]
 			m[i, 10] <- ordem
 		fimse
-		se (i = j) entao
-			DP[i] <- m[i, j]
-		fimse
-		se (i + j = 9) entao
-			DS[i] <- m[i, j]
-		fimse
-		se (i = 5) entao
-			ordem <- m[i, j]
-			m[i, j] <- m[i, 10]
-			m[i, 10] <- ordem
-		fimse
-	fimpara
-fimpara
-para i de 1 ate 10 passo 1 faca
-	para j de 1 ate 10 passo 1 faca
+		
 		ordem <- DP[i]
 		DP[i] <- DS[i]
 		DS[i] <- ordem
 		se (i = j) entao
+			ordem <- DP[i]
+			DP[i] <- m[i, j]
+			m[i, j] <- ordem
+		fimse
+		se (i + j = 11) entao
+			ordem <- DS[i]
+			DS[i] <- m[i, j]
+			m[i, j] <- ordem
+		fimse
 
+		se (i = 5) entao
+			ordem <- m[i, j]
+			m[i, j] <- m[i, 10]
+			m[i, 10] <- ordem
 		fimse
 	fimpara
 fimpara
@@ -1100,10 +1132,78 @@ Fimalgoritmo
 
 **03.** Escrever um algoritmo que lê uma matriz M(6,6) e um valor A e multiplica a matriz M pelo valor A e coloca os valores da matriz multiplicados por A em um vetor de V(36) e escreve no final o vetor V.
 ``` visualg
+Algoritmo "atividade-03"
+Var
+m : vetor[1..6, 1..6] de inteiro
+v : vetor[1..36] de inteiro
+a, i, j, n : inteiro
 
+Inicio
+escreva("A = ")
+leia(a)
+n <- 1
+para i de 1 ate 6 passo 1 faca
+    para j de 1 ate 6 passo 1 faca
+        escreva("m[", i, ", ", j, "] = ")
+        leia(m[i, j])
+        v[n] <- m[i, j] * a
+        n <- n + 1
+    fimpara
+fimpara
+
+para i de 1 ate 36 passo 1 faca
+    escreval("v[", i, "] = ", v[i])
+fimpara
+Fimalgoritmo
 ```
 
 **04.** Escrever um algoritmo que lê uma matriz M(5,5) e cria 2 vetores SL(5), SC(5) que contenham respectivamente as somas das linhas e das colunas de M. Escrever a matriz e os vetores criados.
 ``` visualg
+Algoritmo "atividade-04"
+Var
+m : vetor[1..5, 1..5] de inteiro
+sl, sc : vetor[1..5] de inteiro
+i, j : inteiro
 
+Inicio
+para i de 1 ate 5 passo 1 faca
+    para j de 1 ate 5 passo 1 faca
+        escreva("m[", i, ", ", j, "] = ")
+        leia(m[i, j])
+
+        escolha (i)
+            caso 1
+                sl[i] <- sl[i] + m[i, j]
+            caso 2
+                sl[i] <- sl[i] + m[i, j]
+            caso 3
+                sl[i] <- sl[i] + m[i, j]
+            caso 4
+                sl[i] <- sl[i] + m[i, j]
+            caso 5
+                sl[i] <- sl[i] + m[i, j]
+        fimescolha
+        
+        escolha (j)
+            caso 1
+                sc[j] <- sc[j] + m[i, j]
+            caso 2
+                sc[j] <- sc[j] + m[i, j]
+            caso 3
+                sc[j] <- sc[j] + m[i, j]
+            caso 4
+                sc[j] <- sc[j] + m[i, j]
+            caso 5
+                sc[j] <- sc[j] + m[i, j]
+        fimescolha
+    fimpara
+fimpara
+
+para i de 1 ate 5 passo 1 faca
+    escreval("sl[", i, "] = ", sl[i])
+fimpara
+para i de 1 ate 5 passo 1 faca
+    escreval("sc[", i, "] = ", sc[i])
+fimpara
+Fimalgoritmo
 ```
