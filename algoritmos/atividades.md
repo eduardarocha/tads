@@ -967,21 +967,26 @@ Fimalgoritmo
 Algoritmo "atividade-11"
 Var
 x : vetor[1..10] de inteiro
-i, j, n, quant : inteiro
+i, j, n, limite, quant : inteiro
 
 Inicio
-para i de 100 ate 150 passo 1 faca
+escreva("Inicial: ")
+leia(n)
+limite <- int((n^0.5)) + 2
+
+enquanto (i < 10) faca
+	n <- n + 1
 	quant <- 0
-	para j de 2 ate 13 passo 1 faca
-		se (i % j <> 0) entao
+	para j de 2 ate limite passo 1 faca
+		se (n % j <> 0) entao
 			quant <- quant + 1
 		fimse
 	fimpara
-	se (quant = 12) entao
-		n <- n + 1
-		x[n] <- i
-	fimse
-fimpara
+    se (quant = limite - 1) entao
+   		i <- i + 1
+   		x[i] <- n
+   	fimse
+fimenquanto
 
 para i de 1 ate 10 passo 1 faca
 	escreval("x[", i, "] = ", x[i])
