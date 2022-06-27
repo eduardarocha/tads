@@ -460,25 +460,25 @@ inclua biblioteca Matematica --> mat
 ## Prova (24/05/22)
 **01.** Escreva um algoritmo que lê 4 pares de valores a, b, todos inteiros e positivos, um par de cada vez, e com a < b, e escreve os inteiros pares de a até b, incluindo o a e b se forem pares. (utilizar o laço de repetição "enquanto")
 ``` visualg
-Algoritmo "teste"
+Algoritmo "atividade-01"
 Var
 a, b, i, j : inteiro
 
 Inicio
-a <- b - 1
-enquanto (a < b) e (i < 4) faca
-    para i de 1 ate 4 passo 1 faca
-        escreva("a = ")
-        leia(a)
-        escreva("b = ")
-        leia(b)
+enquanto (i < 4) faca
+	escreval("a < b, sendo a e b números inteiros. Digite:")
+	para i de 1 ate 4 passo 1 faca
+		escreva("a = ")
+		leia(a)
+		escreva("b = ")
+		leia(b)
 
-        para j de a ate b passo 1 faca
-            se (j % 2 = 0) entao
-                escreval(j, " ")
-            fimse
-        fimpara
-    fimpara
+		para j de a ate b passo 1 faca
+			se (j % 2 = 0) entao
+				escreval(j)
+			fimse
+		fimpara
+	fimpara
 fimenquanto
 Fimalgoritmo
 ```
@@ -488,31 +488,29 @@ Fimalgoritmo
 ``` visualg
 Algoritmo "atividade-01"
 Var
-n, a, b, c : inteiro
-Inicio
+n, i1, i2, i3 : inteiro
 
+Inicio
 enquanto (0 <= n) e (n <= 200) faca
 	escreva("n = ")
 	leia(n)
+
 	se (0 <= n) e (n <= 50) entao
-        a <- a + 1
-        escreval("A - Intervalo [0, 50]")
+		i1 <- i1 + 1
 	senao
 		se (50 < n) e (n <= 100) entao
-        	b <- b + 1
-        	escreval("B - Intervalo (50, 100]")
+			i2 <- i2 + 1
 		senao
 			se (100 < n) e (n <= 200) entao
-    			c <- c + 1
-				escreval("C - Intervalo (100, 200]")
+				i3 <- i3 + 1
 			fimse
 		fimse
 	fimse
 fimenquanto
-escreval("A : ", a)
-escreval("B : ", b)
-escreval("C : ", c)
 
+escreval("[0, 50]: ", i1)
+escreval("(50, 100]: ", i2)
+escreval("(100, 200]: ", i3)
 Fimalgoritmo
 ```
 
@@ -523,31 +521,34 @@ Var
 m, i, divisores, fatorial, soma : inteiro
 
 Inicio
-enquanto 0 < m faca
+enquanto (0 <= m) faca
 	escreva("m = ")
 	leia(m)
-	se m % 2 = 0 entao
+
+	se (m % 2 = 0) entao
 		divisores <- 0
-		para i de 1 ate m faca
-			se m MOD i = 0 entao
+		para i de 1 ate m passo 1 faca
+			se (m % i = 0) entao
 				divisores <- divisores + 1
-				escreval(i)
+				escreva(i, " ")
 			fimse
 		fimpara
-		escreval("Quantidade de divisores de m = ", divisores)
+		escreval("Divisores: ", divisores)
+
 	senao
-		se m < 12 entao
+		se (m < 12) entao
 			fatorial <- 1
-			para i de m ate 1 passo -1 faca
+			para i de 1 ate m passo 1 faca
 				fatorial <- fatorial * i
 			fimpara
-			escreval("Fatorial de m = ", fatorial)
+			escreval("Fatorial: ", fatorial)
+			
 		senao
 			soma <- 0
-			para i de 1 ate m faca
+			para i de 1 ate m passo 1 faca
 				soma <- soma + i
 			fimpara
-			escreval("Soma dos números entre 1 até m = ", soma)
+			escreval("Soma: ", soma)
 		fimse
 	fimse
 fimenquanto
@@ -558,29 +559,27 @@ Fimalgoritmo
 ``` visualg
 Algoritmo "atividade-03"
 Var
-a, i, soma, par, impar, media, percPar, percImpar : inteiro
+a, soma, quant, par, impar: inteiro
 
 Inicio
-enquanto 0 <= a faca
-	escreva("a = ")
-	leia(a)
-	se 0 <= a entao
-		i <- i + 1
-		soma <- soma + a
-		se (a MOD 2 = 0) e (a <> 1) entao
-			par <- par + 1
-		senao
-			impar <- impar + 1
-		fimse
-	fimse
+enquanto (0 <= a) faca
+    escreva("a = ")
+    leia(a)
+
+    se (0 <= a) entao
+        soma <- soma + a
+        quant <- quant + 1
+        se (a % 2 = 0) e (a <> 1) entao
+            par <- par + 1
+        senao
+            impar <- impar + 1
+        fimse
+    fimse
 fimenquanto
 
-media <- soma DIV i
-escreval("Média = ", media)
-percPar <- (100 * par) DIV i
-escreval("Pares = ", par, " | ", percPar, "%")
-percImpar <- (100 * impar) DIV i
-escreval("Impares = ", impar, " | ", percImpar, "%")
+escreval("Média: ", (soma / quant))
+escreval("Quantidade -> Pares: ", par, " | Impares: ", impar)
+escreval("Percentagem -> Pares: ", int((par * 100) / quant), "% | Impares: ", int((impar * 100) / quant), "%")
 Fimalgoritmo
 ```
 
@@ -592,45 +591,44 @@ Fimalgoritmo
 * maior salário
 * percentual de pessoas com salário até R$1200,00
 ``` visualg
-Algoritmo "atividade-02"
+Algoritmo "atividade-01"
 Var
-salario, somaS, mediaS, mediaF, maiorS, percS : real
-filhos, somaF, quant, quantS : inteiro
+salario, somaS, maior : real
+filhos, somaF, s1200, quant : inteiro
 
 Inicio
-escreva("Salario: ")
+escreva("Salário: R$ ")
 leia(salario)
 escreva("Filhos: ")
 leia(filhos)
 quant <- 1
 somaS <- salario
 somaF <- filhos
-maiorS <- salario
-enquanto (0 <= salario) faca
-	escreva("Salario: ")
-	leia(salario)
-	se (0 <= salario) entao
-		escreva("Filhos: ")
-		leia(filhos)
-		quant <- quant + 1
-		somaS <- somaS + salario
-		somaF <- somaF + filhos
-		se (maiorS < salario) entao
-			maiorS <- salario
-		fimse
-		se (salario <= 1200) entao
-			quantS <- quantS + 1
-		fimse
-	fimse
+maior <- salario
+se (salario <= 1200) entao
+    s1200 <- s1200 + 1
+fimse
+enquanto (0 <= salario) e (0 <= filhos) faca
+    escreva("Salário: R$ ")
+    leia(salario)
+    escreva("Filhos: ")
+    leia(filhos)
+    se (0 <= salario) e (0 <= filhos) entao
+        quant <- quant + 1
+        somaS <- somaS + salario
+        somaF <-  somaF + filhos
+        se (maior < salario) entao
+            maior <- salario
+        fimse
+        se (salario <= 1200) entao
+            s1200 <- s1200 + 1
+        fimse
+    fimse
 fimenquanto
 
-mediaS <- somaS / quant
-escreval("Media de salario: R$ ", mediaS)
-mediaF <- somaF / quant
-escreval("Media de filhos: ", mediaF)
-escreval("Maior salario: R$ ", maiorS)
-percS <- (quantS * 100) / quant
-escreval("Percentual de salarios ate R$ 1200,00: ", percS)
+escreval("Média -> Salários: R$ ", int(somaS / quant), " | Filhos: ", int(somaF / quant))
+escreval("Maior salário: R$ ", maior)
+escreval("Salários até R$ 1200,00: ", int((s1200 * 100) / quant), "%")
 Fimalgoritmo
 ```
 
@@ -646,35 +644,33 @@ Elabore um algoritmo que leia o código do candidato em um voto, como finalizado
 ``` visualg
 Algoritmo "atividade-02"
 Var
-voto, q1, q2, q3, q4, q5, q6 : inteiro
+voto, c1, c2, c3, c4, nulo, branco : inteiro
 
 Inicio
-voto <- 1
-enquanto (voto <> 0) faca
-	escreva("Voto: ")
-	leia(voto)
-	escolha (voto)
-	caso 1
-		q1 <- q1 + 1
-	caso 2
-		q2 <- q2 + 1
-	caso 3
-		q3 <- q3 + 1
-	caso 4
-		q4 <- q4 + 1
-	caso 5
-		q5 <- q5 + 1
-	caso 6
-		q6 <- q6 + 1
-	fimescolha
-fimenquanto
+repita
+    escreva("Voto: ")
+    leia(voto)
 
-escreval("1 : ", q1)
-escreval("2 : ", q2)
-escreval("3 : ", q3)
-escreval("4 : ", q4)
-escreval("Nulo : ", q5)
-escreval("Branco : ", q6)
+    escolha (voto)
+        caso 1
+            c1 <- c1 + 1
+        caso 2
+            c2 <- c2 + 1
+        caso 3
+            c3 <- c3 + 1
+        caso 4
+            c4 <- c4 + 1
+        caso 5
+            nulo <- nulo + 1
+        caso 6
+            branco <- branco + 1
+        outrocaso
+            voto <- 0
+    fimescolha
+ate (voto = 0)
+
+escreval("Candidatos -> 1: ", c1, " | 2: ", c2, " | 3: ", c3, " | 4: ", c4)
+escreval("Nulos: ", nulo, " | Brancos: ", branco)
 Fimalgoritmo
 ```
 
@@ -682,28 +678,26 @@ Fimalgoritmo
 ``` visualg
 Algoritmo "atividade-03"
 Var
-valorAntigo, valorAtual, mediaAntiga, somaAntiga, mediaAtual, somaAtual : real
-codigo, quant : inteiro
+preco, soma, somaAumento : real
+id, quant : inteiro
 
 Inicio
-repita
-	escreva("Código: ")
-	leia(codigo)
-	se (codigo >= 0) entao
-		escreva("Preço: R$ ")
-		leia(valorAntigo)
-		quant <- quant + 1
-		somaAntiga <- somaAntiga + valorAntigo
-		valorAtual <- valorAntigo + (valorAntigo * 0.2)
-		escreval("Novo preço: R$ ", valorAtual)
-		somaAtual <- somaAtual + valorAtual
-	fimse
-ate (codigo < 0)
+enquanto (0 <= id) faca
+    escreva("ID: ")
+    leia(id)
+    escreva("Preço: R$ ")
+    leia(preco)
 
-mediaAntiga <- somaAntiga / quant
-escreval("Média sem aumento: R$ ", mediaAntiga)
-mediaAtual <- somaAtual / quant
-escreval("Média com aumento: R$ ", mediaAtual)
+    se (0 <= id) entao
+        quant <- quant + 1
+        soma <- soma + preco
+        preco <- preco + (preco * 0.2)
+        somaAumento <- somaAumento + preco
+        escreval("Aumento: R$ ", preco)
+    fimse
+fimenquanto
+
+escreval("Média -> Inicial: R$ ", int(soma / quant), " | Final: R$ ", int(somaAumento / quant))
 Fimalgoritmo
 ```
 
@@ -714,17 +708,19 @@ Fimalgoritmo
 Algoritmo "atividade-01"
 Var
 v : vetor[1..6] de inteiro
-i, negativos : inteiro
+i, quant : inteiro
 
 Inicio
-para i de 1 ate 6 faca
-	escreva("Posição ", i, ": ")
-	leia(v[i])
-	se (v[i] < 0) entao
-		negativos <- negativos + 1
-	fimse
+para i de 1 ate 6 passo 1 faca
+    escreva("v[", i, "] = ")
+    leia(v[i])
+
+    se (v[i] < 0) entao
+        quant <- quant + 1
+    fimse
 fimpara
-escreva("Negativos: ", negativos)
+
+escreval("Negativos: ", quant)
 Fimalgoritmo
 ```
 
@@ -733,18 +729,20 @@ Fimalgoritmo
 Algoritmo "atividade-02"
 Var
 x : vetor[1..10] de inteiro
-i : inteiro
+i, aux : inteiro
 
 Inicio
 para i de 1 ate 10 passo 1 faca
-	escreva("Posição ", i, ": ")
-	leia(x[i])
-	se (x[i] = 0) entao
-		x[i] <- 1
-	fimse
+    escreva("x[", i, "] = ")
+    leia(x[i])
+
+    se (x[i] = 0) entao
+        x[i] <- 1
+    fimse
 fimpara
+
 para i de 1 ate 10 passo 1 faca
-	escreva(x[i], " ")
+    escreval("Mod. x[", i, "] = ", x[i])
 fimpara
 Fimalgoritmo
 ```
@@ -757,17 +755,19 @@ c : vetor[1..50] de inteiro
 i, maior : inteiro
 
 Inicio
-escreva("Posição 1: ")
+escreva("c[1] = ")
 leia(c[1])
 maior <- c[1]
 para i de 2 ate 50 passo 1 faca
-	escreva("Posição ", i, ": ")
-	leia(c[i])
-	se (maior < c[i]) entao
-		maior <- c[i]
-	fimse
+    escreva("c[", i, "] = ")
+    leia(c[i])
+
+    se (maior < c[i]) entao
+        maior <- c[i]
+    fimse
 fimpara
-escreva("Maior: ", maior)
+
+escreval("Maior: ", maior)
 Fimalgoritmo
 ```
 
@@ -779,18 +779,21 @@ n : vetor[1..80] de inteiro
 i, m, p : inteiro
 
 Inicio
-escreva("Posição 1: ")
+escreva("n[1] = ")
 leia(n[1])
 m <- n[1]
+p <- 1
 para i de 2 ate 80 passo 1 faca
-	escreva("Posição ", i, ": ")
-	leia(n[i])
-	se (n[i] < m) entao
-		m <- n[i]
-		p <- i
-	fimse
+    escreva("n[", i, "] = ")
+    leia(n[i])
+
+    se (n[i] < m) entao
+        m <- n[i]
+        p <- i
+    fimse
 fimpara
-escreva("o menor elemento de n[80] é ", m, " e a sua posição é ", p)
+
+escreval("O menor elemento de n é ", m, " e a sua posição é ", p)
 Fimalgoritmo
 ```
 
@@ -799,20 +802,22 @@ Fimalgoritmo
 Algoritmo "atividade-05"
 Var
 n : vetor[1..20] de inteiro
-i, ordem : inteiro
+i, aux : inteiro
 
 Inicio
 para i de 1 ate 20 passo 1 faca
-	escreva("n[", i, "] = ")
-	leia(n[i])
+    escreva("n[", i, "] = ")
+    leia(n[i])
 fimpara
+
 para i de 1 ate 10 passo 1 faca
-	ordem <- n[i]
+    aux <- n[i]
 	n[i] <- n[21 - i]
-	n[21 - i] <- ordem
+	n[21 - i] <- aux
 fimpara
+
 para i de 1 ate 20 passo 1 faca
-	escreval("Mod. n[", i, "] = ", n[i])
+    escreval("Mod. n[", i, "] = ", n[i])
 fimpara
 Fimalgoritmo
 ```
