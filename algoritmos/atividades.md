@@ -827,22 +827,24 @@ Fimalgoritmo
 Algoritmo "atividade-06"
 Var
 k : vetor[1..20] de inteiro
-i, ordem : inteiro
+i, aux : inteiro
 
 Inicio
 para i de 1 ate 20 passo 1 faca
-	escreva("k[", i, "] = ")
-	leia(k[i])
-fimpara
-
-para i de 1 ate 19 passo 2 faca
-	ordem <- k[i]
-	k[i] <- k[i + 1]
-	k[i + 1] <- ordem
+    escreva("k[", i, "] = ")
+    leia(k[i])
 fimpara
 
 para i de 1 ate 20 passo 1 faca
-	escreval("Mod. k[", i, "] = ", k[i])
+    se (i % 2 <> 0) ou (i = 1) entao
+        aux <- k[i]
+        k[i] <- k[i + 1]
+        k[i + 1] <- aux
+    fimse
+fimpara
+
+para i de 1 ate 20 passo 1 faca
+    escreval("Mod. k[", i, "] = ", k[i])
 fimpara
 Fimalgoritmo
 ```
@@ -852,20 +854,22 @@ Fimalgoritmo
 Algoritmo "atividade-07"
 Var
 n : vetor[1..20] de inteiro
-i, ordem : inteiro
+i, aux : inteiro
 
 Inicio
 para i de 1 ate 20 passo 1 faca
-	escreva("n[", i, "] = ")
-	leia(n[i])
+    escreva("n[", i, "] = ")
+    leia(n[i])
 fimpara
+
 para i de 1 ate 10 passo 1 faca
-	ordem <- n[i]
-	n[i] <- n[i + 10]
-	n[i + 10] <- ordem
+    aux <- n[i]
+    n[i] <- n[i + 10]
+    n[i + 10] <- aux
 fimpara
+
 para i de 1 ate 20 passo 1 faca
-	escreval("Mod. n[", i, "] = ", n[i])
+    escreval("Mod. n[", i, "] = ", n[i])
 fimpara
 Fimalgoritmo
 ```
